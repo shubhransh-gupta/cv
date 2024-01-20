@@ -1,2 +1,2 @@
 CV Link :
-https://github.com/shubhransh-gupta/cv
+https://shubhransh-gupta.github.io/cv/
