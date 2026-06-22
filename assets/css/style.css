@@ -1118,6 +1118,104 @@ section {
   background: rgba(168, 85, 247, 0.15);
   color: var(--accent-2);
   border: 1px solid rgba(168, 85, 247, 0.3);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-badge:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+.project-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, var(--bg-card) 55%);
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.project-card-featured::before {
+  transform: scaleX(1);
+}
+
+/* ---- ShubhranshProxy cross-sell ---- */
+.proxy-cross-sell {
+  padding: 0 0 80px;
+}
+
+.proxy-cross-sell-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 44px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.14) 0%, var(--bg-card) 60%);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.proxy-cross-sell-icon {
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.35);
+}
+
+.proxy-cross-sell-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-3);
+  margin: 0 0 8px;
+}
+
+.proxy-cross-sell-copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 12px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.proxy-cross-sell-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+.proxy-cross-sell-copy strong {
+  color: var(--text-primary);
+}
+
+.proxy-cross-sell-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .proxy-cross-sell-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .proxy-cross-sell-icon {
+    margin: 0 auto;
+  }
+
+  .proxy-cross-sell-copy p {
+    max-width: none;
+  }
+
+  .proxy-cross-sell-actions {
+    align-items: center;
+  }
 }
 
 /* ---- Awards ---- */
