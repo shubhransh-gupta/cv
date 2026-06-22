@@ -234,124 +234,26 @@ ul, ol {
   max-width: min(52vw, 320px);
 }
 
-.nav-avatar {
+.nav-mark {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 14px;
   flex-shrink: 0;
-  border: 2px solid transparent;
-  background: linear-gradient(var(--bg-deep), var(--bg-deep)) padding-box, var(--gradient) border-box;
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 28px rgba(99, 102, 241, 0.38);
 }
 
-.nav-brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.morse-wave {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 10px;
-  opacity: 0.35;
-  transition: opacity 0.2s;
-}
-
-.morse-wave.is-active {
-  opacity: 1;
-}
-
-.wave-bar {
-  width: 3px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--accent-3);
-  animation: waveIdle 1.2s ease-in-out infinite;
-}
-
-.wave-bar:nth-child(1) { animation-delay: 0s; }
-.wave-bar:nth-child(2) { animation-delay: 0.1s; }
-.wave-bar:nth-child(3) { animation-delay: 0.2s; }
-.wave-bar:nth-child(4) { animation-delay: 0.15s; }
-.wave-bar:nth-child(5) { animation-delay: 0.05s; }
-
-.morse-wave.is-active .wave-bar {
-  animation: wavePlay 0.35s ease-in-out infinite alternate;
-}
-
-@keyframes waveIdle {
-  0%, 100% { height: 3px; opacity: 0.4; }
-  50% { height: 6px; opacity: 0.7; }
-}
-
-@keyframes wavePlay {
-  0% { height: 3px; opacity: 0.6; }
-  100% { height: 10px; opacity: 1; box-shadow: 0 0 6px var(--accent-3); }
-}
-
-.morse-name {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.2;
-}
-
-.morse-sym {
-  display: inline-block;
-  transition: color 0.05s, text-shadow 0.05s, transform 0.05s;
-}
-
-.morse-sym.active {
-  color: var(--accent-3);
-  text-shadow: 0 0 8px var(--accent-3);
-  transform: scale(1.15);
-}
-
-.morse-letter {
-  margin-right: 0.35em;
-}
-
-.morse-word-gap {
-  margin: 0 0.25em;
-  color: var(--accent-2);
-  opacity: 0.5;
-}
-
-.morse-readable {
+.nav-brand-name {
   font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 1.15em;
-}
-
-.morse-read-char {
-  color: var(--text-muted);
-  transition: color 0.15s, text-shadow 0.15s;
-}
-
-.morse-read-char.revealed {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.nav-brand.is-playing .nav-avatar {
-  box-shadow: 0 0 24px rgba(34, 211, 238, 0.5);
 }
 
 .nav-logo {
@@ -435,61 +337,29 @@ ul, ol {
   position: relative;
 }
 
-.hero-badge {
+.hero-shell {
+  display: block;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 10px 16px;
-  margin-top: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 28px 0 28px;
+  border: 1px solid rgba(103, 232, 249, 0.24);
   border-radius: 100px;
-  font-size: 0.82rem;
-  color: var(--text-primary);
-  margin-bottom: 32px;
-  backdrop-filter: blur(16px);
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03));
-  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-badge::after {
-  content: '';
-  position: absolute;
-  top: -35%;
-  left: -22%;
-  width: 44%;
-  height: 170%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
-  transform: rotate(20deg);
-  animation: badgeShine 2.4s linear infinite;
-}
-
-.hero-badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 10px #22c55e;
-  animation: pulse 1s ease-in-out infinite;
-}
-
-.hero-badge-text {
-  position: relative;
-  z-index: 1;
+  color: var(--accent-3);
+  background: rgba(34, 211, 238, 0.08);
+  box-shadow: 0 10px 34px rgba(34, 211, 238, 0.12);
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-@keyframes badgeShine {
-  from { left: -30%; }
-  to { left: 130%; }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
 }
 
 .hero-title {
@@ -786,6 +656,7 @@ ul, ol {
 }
 
 .hero-stats {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
@@ -1639,17 +1510,21 @@ section {
     z-index: 1002;
   }
 
-  .nav-avatar {
+  .nav-mark {
     width: 40px;
     height: 40px;
   }
 
-  .morse-name {
-    font-size: 0.55rem;
+  .nav-brand-name {
+    font-size: 0.82rem;
   }
 
-  .morse-readable {
-    font-size: 0.65rem;
+  .hero-shell {
+    padding-top: 32px;
+  }
+
+  .hero-kicker {
+    margin-top: 0;
   }
 
   .nav-links {
