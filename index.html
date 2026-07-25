@@ -3,390 +3,429 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shubhransh Gupta — iOS Engineer crafting seamless mobile experiences at Lenskart. Swift, SwiftUI, CI/CD, and scalable architecture.">
-  <title>Shubhransh Gupta — iOS Engineer</title>
+  <meta name="description" content="Shubhransh Gupta — Senior iOS Engineer crafting seamless mobile experiences at Lenskart. Swift, SwiftUI, CI/CD, and scalable architecture.">
+  <title>Shubhransh Gupta — Senior iOS Engineer</title>
   <link rel="icon" href="assets/images/sg-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/images/sg-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=1.4">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
 </head>
 <body>
-  <div class="cursor-glow" id="cursor-glow"></div>
-  <div class="cursor-dot" id="cursor-dot"></div>
-  <div class="bg-mesh"></div>
-  <div class="bg-grid"></div>
-  <div class="noise"></div>
-
-  <header class="site-header">
+  <div class="cosmic-bg" aria-hidden="true">
+    <canvas id="cosmic-canvas"></canvas>
+    <div class="cosmic-fallback"></div>
+    <div class="cosmic-vignette"></div>
+    <div class="cosmic-grain"></div>
+  </div>
+  <header class="site-header" id="site-header">
     <nav class="nav" id="nav">
       <div class="nav-inner">
         <a href="index.html" class="nav-brand" aria-label="Shubhransh Gupta">
-          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="44" height="44">
+          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="36" height="36">
           <span class="nav-brand-name">Shubhransh Gupta</span>
         </a>
         <div class="nav-links" id="nav-links">
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#skills" class="nav-link">Skills</a>
           <a href="#projects" class="nav-link">Projects</a>
-          <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" class="nav-link" target="_blank" rel="noopener">ShubhranshProxy</a>
           <a href="contributions.html" class="nav-link">Contributions</a>
           <a href="recommendations.html" class="nav-link">Recommendations</a>
           <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="nav-link" download="Shubhransh-Gupta-Resume.pdf">Resume</a>
-        <a href="#contact" class="nav-cta">Let's Talk</a>
+          <a href="#contact" class="nav-cta">Let's Talk</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
-
-    <div class="marquee-wrap">
-      <div class="marquee">
-        <div class="marquee-content">
-          <span class="marquee-item"><span class="marquee-dot"></span> iOS Engineer</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> iOS · Swift · SwiftUI</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Bengaluru, India</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> SDE 2 @ Lenskart</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Building the future of mobile</span>
-        </div>
-        <div class="marquee-content" aria-hidden="true">
-          <span class="marquee-item"><span class="marquee-dot"></span> iOS Engineer</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> iOS · Swift · SwiftUI</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Bengaluru, India</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> SDE 2 @ Lenskart</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Building the future of mobile</span>
-        </div>
-      </div>
-    </div>
   </header>
 
-  <section class="hero">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="container hero-shell">
-      <div class="hero-copy">
-        <p class="hero-kicker reveal">Senior iOS Engineer · Swift · SwiftUI · Mobile Architecture</p>
-        <h1 class="hero-title reveal">
-          Building mobile<br>
-          experiences that<br>
-          <span class="gradient">move & inspire</span>
-        </h1>
-        <p class="hero-subtitle reveal">
-          I'm Shubhransh Gupta — an iOS engineer with 5+ years crafting high-impact apps at Lenskart, Navi, MakeMyTrip & Nuclei. I blend Swift mastery with scalable architecture to ship products millions rely on.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#experience" class="btn btn-primary">View My Work</a>
-          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Download Resume</a>
-          <a href="contributions.html" class="btn btn-ghost">GitHub & Writing →</a>
-          <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" class="btn btn-ghost" target="_blank" rel="noopener">ShubhranshProxy →</a>
+  <main>
+    <section class="hero command-hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Senior iOS Engineer · Bengaluru</p>
+          <h1 class="hero-title">Building mobile experiences that move &amp; inspire</h1>
+          <p class="hero-lede">I'm Shubhransh Gupta — an iOS engineer with 5+ years crafting high-impact apps at Lenskart, Navi, MakeMyTrip &amp; Nuclei. I blend Swift mastery with scalable architecture to ship products millions rely on.</p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn-primary">View my work</a>
+            <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-secondary" download="Shubhransh-Gupta-Resume.pdf">Download resume</a>
+          </div>
         </div>
-      </div>
 
-      <div class="hero-stats reveal">
-        <div class="stat-item">
-          <div class="stat-number" data-count="5">0</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-count="4">0</div>
-          <div class="stat-label">Companies</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-count="99" data-suffix=".9%">0</div>
-          <div class="stat-label">Crash-Free %</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-count="59">0</div>
-          <div class="stat-label">GitHub Repos</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="container">
-      <p class="section-label reveal">Career Journey</p>
-      <h2 class="section-title reveal">Engineering at<br>scale & speed</h2>
-      <p class="section-desc reveal">From fintech to travel to eyewear — I've shipped features that touch millions of users across India's top consumer apps.</p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Lenskart</span>
-              <span class="timeline-role">SDE 2</span>
+        <div class="hero-demo reveal" data-delay="120">
+          <div class="demo-shell">
+            <div class="demo-topbar">
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-title">iOS · Build Console</span>
             </div>
-            <p class="timeline-date">Mar 2026 – Present · Bengaluru</p>
-            <ul class="timeline-points">
-              <li>Improved crash-free sessions from 99.4% to 99.9% by identifying and resolving memory leaks in the product listing module.</li>
-              <li>Built CI/CD pipeline using GitHub Actions, Firebase App Distribution, and Xcode build tools — reducing manual release effort and improving delivery speed.</li>
-            </ul>
-            <span class="timeline-tag">Current Role</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Navi</span>
-              <span class="timeline-role">SDE 2</span>
+            <div class="demo-body">
+              <p class="demo-label">Your mobile operator</p>
+              <div class="shimmer-line" aria-hidden="true"><span></span></div>
+              <p class="demo-prompt">Which architecture should power the new checkout flow?</p>
+              <ul class="demo-options">
+                <li class="demo-option is-active"><span>1</span> MVVM + Combine · modular pods</li>
+                <li class="demo-option"><span>2</span> SwiftUI feature modules · SPM</li>
+                <li class="demo-option"><span>3</span> VIPER · legacy UIKit bridge</li>
+              </ul>
+              <div class="demo-footer">
+                <span>Review and ship every release.</span>
+                <span class="demo-status">99.9% crash-free</span>
+              </div>
             </div>
-            <p class="timeline-date">May 2025 – Mar 2026 · Bengaluru</p>
-            <ul class="timeline-points">
-              <li>Improved application scalability by migrating lifecycle management to SceneDelegate architecture.</li>
-              <li>Enabled deep-linking and faster content discovery by integrating CoreSpotlight-based search indexing.</li>
-              <li>Enhanced modularity and testability by implementing dependency injection using Swinject.</li>
-            </ul>
           </div>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">MakeMyTrip</span>
-              <span class="timeline-role">Senior Software Engineer</span>
+      <div class="container hero-stats reveal" data-delay="200">
+        <div class="stat-strip">
+          <div class="stat-item">
+            <div class="stat-number" data-count="5">0</div>
+            <div class="stat-label">Years experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="4">0</div>
+            <div class="stat-label">Companies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="99" data-suffix=".9%">0</div>
+            <div class="stat-label">Crash-free %</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="59">0</div>
+            <div class="stat-label">GitHub repos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-header reveal">
+          <span class="story-counter" id="story-counter">1 / 3</span>
+          <h2 class="section-title">Say what you need — the engineering gets done</h2>
+          <p class="section-desc">From architecture to App Store — I turn product intent into shipped iOS work across fintech, travel, and consumer scale.</p>
+        </div>
+
+        <div class="story-carousel" id="story-carousel">
+          <div class="story-track">
+            <article class="story-slide is-active" data-slide="0">
+              <div class="story-slide-copy">
+                <h3>Ship features at consumer scale</h3>
+                <p>Zero Cancellation, Unified Flights SDK, UPI onboarding — production features used by millions across MakeMyTrip, Navi, and Nuclei.</p>
+              </div>
+              <div class="story-slide-visual">
+                <div class="mini-card">
+                  <span class="mini-label">Current</span>
+                  <strong>Lenskart · SDE 2</strong>
+                  <p>Crash-free sessions 99.4% → 99.9%</p>
+                </div>
+              </div>
+            </article>
+            <article class="story-slide" data-slide="1">
+              <div class="story-slide-copy">
+                <h3>Architecture that scales teams</h3>
+                <p>SceneDelegate migrations, dependency injection with Swinject, SPM/CocoaPods SDKs — modular systems built for velocity and testability.</p>
+              </div>
+              <div class="story-slide-visual">
+                <div class="mini-card">
+                  <span class="mini-label">Stack</span>
+                  <strong>MVVM · DI · CI/CD</strong>
+                  <p>GitHub Actions · TestFlight · Firebase</p>
+                </div>
+              </div>
+            </article>
+            <article class="story-slide" data-slide="2">
+              <div class="story-slide-copy">
+                <h3>Build tools, not just apps</h3>
+                <p>ShubhranshProxy — a native macOS HTTP(S) debugging proxy. Cobalion — AI compliance platform. Open source when the problem deserves it.</p>
+              </div>
+              <div class="story-slide-visual">
+                <div class="mini-card">
+                  <span class="mini-label">Flagship</span>
+                  <strong>ShubhranshProxy</strong>
+                  <p>Native Swift · SSL decrypt · HAR export</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="story-controls">
+            <button type="button" class="story-btn" id="story-prev" aria-label="Previous slide">←</button>
+            <button type="button" class="story-btn" id="story-next" aria-label="Next slide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-block">
+      <div class="container">
+        <p class="eyebrow reveal">Career journey</p>
+        <h2 class="section-title reveal">Engineering at scale &amp; speed</h2>
+        <p class="section-desc reveal">From fintech to travel to eyewear — features that touch millions of users across India's top consumer apps.</p>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-company">Lenskart</span>
+                <span class="timeline-role">SDE 2</span>
+              </div>
+              <p class="timeline-date">Mar 2026 – Present · Bengaluru</p>
+              <ul class="timeline-points">
+                <li>Improved crash-free sessions from 99.4% to 99.9% by identifying and resolving memory leaks in the product listing module.</li>
+                <li>Built CI/CD pipeline using GitHub Actions, Firebase App Distribution, and Xcode build tools — reducing manual release effort and improving delivery speed.</li>
+              </ul>
+              <span class="timeline-tag">Current role</span>
             </div>
-            <p class="timeline-date">Jan 2024 – May 2025 · Bengaluru</p>
-            <ul class="timeline-points">
-              <li>Improved user experience by developing features like Zero Cancellation, Free Date Change Insurance, and advanced Sort & Filter using SwiftUI.</li>
-              <li>Accelerated feature integration by implementing Unified Flights SDK using SPM and CocoaPods across multiple architectural patterns.</li>
-              <li>Increased team productivity by leading an iOS pod and conducting knowledge-sharing sessions on best practices.</li>
-            </ul>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-company">Nuclei</span>
-              <span class="timeline-role">iOS Developer · SDE-1</span>
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-company">Navi</span>
+                <span class="timeline-role">SDE 2</span>
+              </div>
+              <p class="timeline-date">May 2025 – Mar 2026 · Bengaluru</p>
+              <ul class="timeline-points">
+                <li>Improved application scalability by migrating lifecycle management to SceneDelegate architecture.</li>
+                <li>Enabled deep-linking and faster content discovery by integrating CoreSpotlight-based search indexing.</li>
+                <li>Enhanced modularity and testability by implementing dependency injection using Swinject.</li>
+              </ul>
             </div>
-            <p class="timeline-date">May 2021 – Dec 2023 · Bengaluru</p>
-            <ul class="timeline-points">
-              <li>Delivered core banking features including Fund Transfer, Scan & Pay, and onboarding — improving mobile banking usability.</li>
-              <li>Achieved regulatory compliance by integrating UPI using NPCI CL Library and successfully completing certification.</li>
-              <li>Improved app performance and data consistency by optimizing CoreData migrations and concurrency handling.</li>
-            </ul>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-company">MakeMyTrip</span>
+                <span class="timeline-role">Senior Software Engineer</span>
+              </div>
+              <p class="timeline-date">Jan 2024 – May 2025 · Bengaluru</p>
+              <ul class="timeline-points">
+                <li>Improved user experience by developing features like Zero Cancellation, Free Date Change Insurance, and advanced Sort &amp; Filter using SwiftUI.</li>
+                <li>Accelerated feature integration by implementing Unified Flights SDK using SPM and CocoaPods across multiple architectural patterns.</li>
+                <li>Increased team productivity by leading an iOS pod and conducting knowledge-sharing sessions on best practices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-company">Nuclei</span>
+                <span class="timeline-role">iOS Developer · SDE-1</span>
+              </div>
+              <p class="timeline-date">May 2021 – Dec 2023 · Bengaluru</p>
+              <ul class="timeline-points">
+                <li>Delivered core banking features including Fund Transfer, Scan &amp; Pay, and onboarding — improving mobile banking usability.</li>
+                <li>Achieved regulatory compliance by integrating UPI using NPCI CL Library and successfully completing certification.</li>
+                <li>Improved app performance and data consistency by optimizing CoreData migrations and concurrency handling.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="container">
-      <p class="section-label reveal">Expertise</p>
-      <h2 class="section-title reveal">Technologies I<br>work with</h2>
+    <section id="skills" class="section-block section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">Expertise</p>
+        <h2 class="section-title reveal">Technologies I work with</h2>
+        <p class="section-desc reveal">The entire iOS universe — from UI to architecture to release pipelines.</p>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">⚡</div>
-          <h3>Languages & Frameworks</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Swift</span>
-            <span class="skill-tag">SwiftUI</span>
-            <span class="skill-tag">UIKit</span>
-            <span class="skill-tag">CoreData</span>
-            <span class="skill-tag">Combine</span>
-            <span class="skill-tag">Concurrency</span>
-            <span class="skill-tag">Observable</span>
-            <span class="skill-tag">APNS</span>
+        <div class="feature-tabs reveal" id="feature-tabs">
+          <div class="tab-list" role="tablist">
+            <button type="button" class="tab-btn is-active" role="tab" aria-selected="true" data-tab="languages">Languages &amp; frameworks</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="tools">Tools &amp; platforms</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="architecture">Architecture</button>
           </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">🛠</div>
-          <h3>Tools & Platforms</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Xcode</span>
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Bitbucket</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">App Store Connect</span>
-            <span class="skill-tag">TestFlight</span>
-            <span class="skill-tag">Clevertap</span>
-            <span class="skill-tag">Gerrit</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">🏗</div>
-          <h3>Architecture & Concepts</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">MVVM</span>
-            <span class="skill-tag">MVP</span>
-            <span class="skill-tag">VIPER</span>
-            <span class="skill-tag">MVC</span>
-            <span class="skill-tag">Dependency Injection</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">SPM</span>
-            <span class="skill-tag">CocoaPods</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="proxy-cross-sell">
-    <div class="container">
-      <div class="proxy-cross-sell-inner reveal">
-        <img src="https://shubhransh-gupta.github.io/ShubhranshProxy/assets/app-icon-256.png" alt="" class="proxy-cross-sell-icon" width="64" height="64">
-        <div class="proxy-cross-sell-copy">
-          <p class="proxy-cross-sell-label">Open source · macOS</p>
-          <h2>ShubhranshProxy</h2>
-          <p>A next-generation HTTP(S) debugging proxy I built from scratch — capture Mac, iPhone & Android traffic with SSL decryption, Map Local, breakpoints, and HAR export. <strong>100% free, forever.</strong></p>
-        </div>
-        <div class="proxy-cross-sell-actions">
-          <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" class="btn btn-primary" target="_blank" rel="noopener">Explore the app</a>
-          <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/creator.html" class="btn btn-ghost" target="_blank" rel="noopener">Meet the creator →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <p class="section-label reveal">Featured Work</p>
-      <h2 class="section-title reveal">Projects that<br>made an impact</h2>
-      <p class="section-desc reveal">Hackathon wins, AI innovation, and platforms built from scratch.</p>
-
-      <div class="projects-grid">
-        <div class="project-card project-card-featured">
-          <p class="project-year">2026 · Flagship Open Source</p>
-          <h3>ShubhranshProxy — HTTP(S) Debugging Proxy</h3>
-          <p>Native macOS proxy engine built in Swift. Intelligent domain sidebar, selective SSL decrypt, mobile capture on the same Wi‑Fi, Map Local, breakpoints, throttling, and HAR export — the complete toolkit, unlocked free on day one.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;">
-            <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" target="_blank" rel="noopener" class="project-badge">Explore website →</a>
-            <a href="https://github.com/shubhransh-gupta/ShubhranshProxy/releases/latest/download/ShubhranshProxy.dmg" target="_blank" rel="noopener" class="project-badge">Download for macOS</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <p class="project-year">2025</p>
-          <h3>Cobalion — AI Compliance Platform</h3>
-          <p>Built an AI-driven platform to automatically scrape regulatory circulars from NPCI and SEBI (PDF/HTML) and process them using LLM-based contextual analysis. Designed alerting workflows to notify stakeholders on compliance gaps.</p>
-          <span class="project-badge">🏆 Best Innovative Project — Navi Hackathon</span>
-        </div>
-        <div class="project-card">
-          <p class="project-year">2022</p>
-          <h3>POGO — Gift Voucher Platform</h3>
-          <p>Developed a gift voucher platform using Swift (iOS), Python (backend), and MySQL, enabling reward-based recharge workflows. Built during the Nuclei Hackathon.</p>
-          <span class="project-badge">Nuclei Hackathon Project</span>
-        </div>
-        <div class="project-card">
-          <p class="project-year">Open Source</p>
-          <h3>Swift Contact Application</h3>
-          <p>A native iOS contact management app built with Swift, demonstrating UIKit patterns, data persistence, and clean architecture principles.</p>
-          <a href="https://github.com/ShubhranshGupta/Swift-Contact-Application" target="_blank" rel="noopener" class="project-badge">View on GitHub →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <p class="section-label reveal">Education</p>
-      <h2 class="section-title reveal">Academic foundation</h2>
-
-      <div class="edu-card reveal">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-content">
-          <h3>BNM Institute of Technology</h3>
-          <p class="degree">B.E. Computer Science · GPA 8.45/10</p>
-          <p class="details">Aug 2017 – Jun 2021 · Bengaluru, India</p>
-        </div>
-      </div>
-
-      <div class="awards-list" style="margin-top: 48px;">
-        <div class="award-item">
-          <span class="award-icon">🏆</span>
-          <div class="award-text">
-            <strong>Innovative Project Labs Summer Championship Award</strong>
-            BNM Institute of Technology · 2018
-          </div>
-        </div>
-        <div class="award-item">
-          <span class="award-icon">🥇</span>
-          <div class="award-text">
-            <strong>Ranked #1 at college level on GeeksForGeeks</strong>
-            2021
+          <div class="tab-panels">
+            <div class="tab-panel is-active" data-panel="languages">
+              <p class="tab-panel-lede">Swift-first development across UIKit, SwiftUI, and modern concurrency.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Swift</span>
+                <span class="skill-tag">SwiftUI</span>
+                <span class="skill-tag">UIKit</span>
+                <span class="skill-tag">CoreData</span>
+                <span class="skill-tag">Combine</span>
+                <span class="skill-tag">Concurrency</span>
+                <span class="skill-tag">Observable</span>
+                <span class="skill-tag">APNS</span>
+              </div>
+            </div>
+            <div class="tab-panel" data-panel="tools">
+              <p class="tab-panel-lede">Release pipelines, distribution, and the toolchain behind every build.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Xcode</span>
+                <span class="skill-tag">Git &amp; GitHub</span>
+                <span class="skill-tag">Bitbucket</span>
+                <span class="skill-tag">Jira</span>
+                <span class="skill-tag">App Store Connect</span>
+                <span class="skill-tag">TestFlight</span>
+                <span class="skill-tag">Clevertap</span>
+                <span class="skill-tag">Gerrit</span>
+              </div>
+            </div>
+            <div class="tab-panel" data-panel="architecture">
+              <p class="tab-panel-lede">Patterns and packaging that keep large codebases maintainable.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">MVVM</span>
+                <span class="skill-tag">MVP</span>
+                <span class="skill-tag">VIPER</span>
+                <span class="skill-tag">MVC</span>
+                <span class="skill-tag">Dependency Injection</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">SPM</span>
+                <span class="skill-tag">CocoaPods</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="recommendations">
-    <div class="container">
-      <p class="section-label reveal">What Teammates Say</p>
-      <h2 class="section-title reveal">Recommendations</h2>
-      <p class="section-desc reveal">Feedback from colleagues I've worked with at MakeMyTrip and across iOS engineering teams.</p>
-
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <p class="project-year">MakeMyTrip · iOS</p>
-          <h3>Shani Vishwakarma</h3>
-          <p class="rec-excerpt">
-            "I've had the pleasure of working alongside Shubhransh at MakeMyTrip, and I can confidently say that he's one of the most dedicated and resourceful professionals I've worked with..."
-          </p>
-        </article>
-
-        <article class="project-card reveal">
-          <p class="project-year">MakeMyTrip · Flight Unification</p>
-          <h3>Harsh Chauhan</h3>
-          <p class="rec-excerpt">
-            "I had the pleasure of working with Shubhransh on the flight unification task, and his contributions were truly outstanding. He tackled complex challenges with ease, especially at the kernel level..."
-          </p>
-        </article>
+    <section class="proxy-cross-sell section-block">
+      <div class="container">
+        <div class="proxy-cross-sell-inner reveal">
+          <span class="promo-badge promo-badge--corner">Ad</span>
+          <img src="https://shubhransh-gupta.github.io/ShubhranshProxy/assets/app-icon-256.png" alt="" class="proxy-cross-sell-icon" width="64" height="64">
+          <div class="proxy-cross-sell-copy">
+            <div class="proxy-cross-sell-header">
+              <span class="promo-badge promo-badge--try">Try it</span>
+              <p class="eyebrow">Open source · macOS</p>
+            </div>
+            <h2>ShubhranshProxy</h2>
+            <p>A next-generation HTTP(S) debugging proxy I built from scratch — capture Mac, iPhone &amp; Android traffic with SSL decryption, Map Local, breakpoints, and HAR export. <strong>100% free, forever.</strong></p>
+          </div>
+          <div class="proxy-cross-sell-actions">
+            <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" class="btn btn-primary" target="_blank" rel="noopener">Explore the app</a>
+            <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/creator.html" class="btn btn-secondary" target="_blank" rel="noopener">Meet the creator</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="rec-toggle-wrap reveal">
-        <a href="recommendations.html" class="btn btn-ghost">Read more recommendations →</a>
+    <section id="projects" class="section-block">
+      <div class="container">
+        <p class="eyebrow reveal">Featured work</p>
+        <h2 class="section-title reveal">Projects that made an impact</h2>
+        <p class="section-desc reveal">Hackathon wins, AI innovation, and platforms built from scratch.</p>
+
+        <div class="projects-grid">
+          <div class="project-card project-card-featured reveal">
+            <span class="promo-badge promo-badge--corner">Ad</span>
+            <p class="project-year">2026 · Flagship open source</p>
+            <h3>ShubhranshProxy — HTTP(S) Debugging Proxy</h3>
+            <p>Native macOS proxy engine built in Swift. Intelligent domain sidebar, selective SSL decrypt, mobile capture on the same Wi‑Fi, Map Local, breakpoints, throttling, and HAR export — the complete toolkit, unlocked free on day one.</p>
+            <div class="project-links">
+              <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" target="_blank" rel="noopener" class="project-badge">Explore website →</a>
+              <a href="https://github.com/shubhransh-gupta/ShubhranshProxy/releases/latest/download/ShubhranshProxy.dmg" target="_blank" rel="noopener" class="project-badge">Download for macOS</a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <p class="project-year">2025</p>
+            <h3>Cobalion — AI Compliance Platform</h3>
+            <p>Built an AI-driven platform to automatically scrape regulatory circulars from NPCI and SEBI (PDF/HTML) and process them using LLM-based contextual analysis. Designed alerting workflows to notify stakeholders on compliance gaps.</p>
+            <span class="project-badge">Best Innovative Project — Navi Hackathon</span>
+          </div>
+          <div class="project-card reveal">
+            <p class="project-year">2022</p>
+            <h3>POGO — Gift Voucher Platform</h3>
+            <p>Developed a gift voucher platform using Swift (iOS), Python (backend), and MySQL, enabling reward-based recharge workflows. Built during the Nuclei Hackathon.</p>
+            <span class="project-badge">Nuclei Hackathon Project</span>
+          </div>
+          <div class="project-card reveal">
+            <p class="project-year">Open source</p>
+            <h3>Swift Contact Application</h3>
+            <p>A native iOS contact management app built with Swift, demonstrating UIKit patterns, data persistence, and clean architecture principles.</p>
+            <a href="https://github.com/ShubhranshGupta/Swift-Contact-Application" target="_blank" rel="noopener" class="project-badge">View on GitHub →</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <p class="section-label reveal">Get in Touch</p>
-      <h2 class="section-title reveal">Let's build something<br>extraordinary</h2>
-      <p class="section-desc reveal">Open to conversations about iOS engineering, architecture, and impactful product work.</p>
+    <section id="education" class="section-block section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">Education</p>
+        <h2 class="section-title reveal">Academic foundation</h2>
 
-      <div class="contact-links reveal">
-        <a href="mailto:gupta.subhransh@gmail.com" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          gupta.subhransh@gmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/shubhransh-gupta/" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-.33-1.32 1.77 1.77 0 00-1.52-1C13.55 11 13 12.18 13 13.5v5h-3v-6h3v1.18A2.17 2.17 0 019.5 12.5c-1.5 0-2.5 1.22-2.5 3.24V19h-3v-9h3v1.18A3.11 3.11 0 016.5 10.5c1.5 0 2.5 1.22 2.5 3.24V19h3z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 6.8c.85.004 1.71.11 2.51.32 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0012 2z"/></svg>
-          GitHub
-        </a>
-        <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="contact-link" download="Shubhransh-Gupta-Resume.pdf">
-          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-          Download Resume
-        </a>
-        <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-          Medium
-        </a>
-        <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l6.9 3.45L12 11.08 5.1 7.63 12 4.18zM4 9.08l7 3.5v7.34l-7-3.5V9.08zm9 10.84v-7.34l7-3.5v7.34l-7 3.5z"/></svg>
-          ShubhranshProxy
-        </a>
-        <a href="https://shubhransh-gupta.github.io/ShubhranshProxy/creator.html" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          Creator page
-        </a>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-content">
+            <h3>BNM Institute of Technology</h3>
+            <p class="degree">B.E. Computer Science · GPA 8.45/10</p>
+            <p class="details">Aug 2017 – Jun 2021 · Bengaluru, India</p>
+          </div>
+        </div>
+
+        <div class="awards-list">
+          <div class="award-item reveal">
+            <span class="award-icon">🏆</span>
+            <div class="award-text">
+              <strong>Innovative Project Labs Summer Championship Award</strong>
+              BNM Institute of Technology · 2018
+            </div>
+          </div>
+          <div class="award-item reveal">
+            <span class="award-icon">🥇</span>
+            <div class="award-text">
+              <strong>Ranked #1 at college level on GeeksForGeeks</strong>
+              2021
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="recommendations" class="section-block">
+      <div class="container">
+        <p class="eyebrow reveal">What teammates say</p>
+        <h2 class="section-title reveal">Recommendations</h2>
+        <p class="section-desc reveal">Feedback from colleagues I've worked with at MakeMyTrip and across iOS engineering teams.</p>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <p class="project-year">MakeMyTrip · iOS</p>
+            <h3>Shani Vishwakarma</h3>
+            <p class="rec-excerpt">"I've had the pleasure of working alongside Shubhransh at MakeMyTrip, and I can confidently say that he's one of the most dedicated and resourceful professionals I've worked with..."</p>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-year">MakeMyTrip · Flight Unification</p>
+            <h3>Harsh Chauhan</h3>
+            <p class="rec-excerpt">"I had the pleasure of working with Shubhransh on the flight unification task, and his contributions were truly outstanding. He tackled complex challenges with ease, especially at the kernel level..."</p>
+          </article>
+        </div>
+
+        <div class="rec-toggle-wrap reveal">
+          <a href="recommendations.html" class="btn btn-secondary">Read more recommendations →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+      <div class="container cta-inner reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="section-title">This is how iOS engineering works now</h2>
+        <p class="section-desc">Open to conversations about iOS engineering, architecture, and impactful product work.</p>
+        <div class="hero-actions">
+          <a href="mailto:gupta.subhransh@gmail.com" class="btn btn-primary">Email me</a>
+          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-secondary" download="Shubhransh-Gupta-Resume.pdf">Download resume</a>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/shubhransh-gupta/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+          <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="contact-link">Medium</a>
+          <a href="contributions.html" class="contact-link">Contributions</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -394,6 +433,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cosmic-bg.js?v=2.1"></script>
+  <script src="assets/js/main.js?v=2.1"></script>
 </body>
 </html>

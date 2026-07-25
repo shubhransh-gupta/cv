@@ -9,21 +9,21 @@
   <link rel="apple-touch-icon" href="assets/images/sg-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=1.4">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
 </head>
 <body>
-  <div class="cursor-glow" id="cursor-glow"></div>
-  <div class="cursor-dot" id="cursor-dot"></div>
-  <div class="bg-mesh"></div>
-  <div class="bg-grid"></div>
-  <div class="noise"></div>
-
-  <header class="site-header">
+  <div class="cosmic-bg" aria-hidden="true">
+    <canvas id="cosmic-canvas"></canvas>
+    <div class="cosmic-fallback"></div>
+    <div class="cosmic-vignette"></div>
+    <div class="cosmic-grain"></div>
+  </div>
+  <header class="site-header" id="site-header">
     <nav class="nav" id="nav">
       <div class="nav-inner">
         <a href="index.html" class="nav-brand" aria-label="Shubhransh Gupta">
-          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="44" height="44">
+          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="36" height="36">
           <span class="nav-brand-name">Shubhransh Gupta</span>
         </a>
         <div class="nav-links" id="nav-links">
@@ -40,32 +40,12 @@
         </button>
       </div>
     </nav>
-
-    <div class="marquee-wrap">
-      <div class="marquee">
-        <div class="marquee-content">
-          <span class="marquee-item"><span class="marquee-dot"></span> Recommendations</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Testimonials</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Peer Feedback</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Professional Endorsements</span>
-        </div>
-        <div class="marquee-content" aria-hidden="true">
-          <span class="marquee-item"><span class="marquee-dot"></span> Recommendations</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Testimonials</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Peer Feedback</span>
-          <span class="marquee-item"><span class="marquee-dot"></span> Professional Endorsements</span>
-        </div>
-      </div>
-    </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
-      <p class="section-label reveal">What Teammates Say</p>
-      <h1 class="hero-title reveal">
-        LinkedIn<br>
-        <span class="gradient">Recommendations</span>
-      </h1>
+      <p class="eyebrow reveal">What Teammates Say</p>
+      <h1 class="hero-title reveal">LinkedIn<br><span class="gradient">recommendations</span></h1>
       <p class="hero-subtitle reveal" style="margin-inline: auto; text-align: center;">
         Direct recommendations from collaborators who worked with me on production iOS systems and high-impact delivery.
       </p>
@@ -138,7 +118,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cosmic-bg.js?v=2.1"></script>
+  <script src="assets/js/main.js?v=2.1"></script>
   <script src="assets/js/recommendations.js"></script>
 </body>
 </html>

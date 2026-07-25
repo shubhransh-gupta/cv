@@ -3,45 +3,15 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  // Custom cursor
-  if (!prefersReducedMotion && window.innerWidth > 768) {
-    const glow = document.getElementById('cursor-glow')
-    const dot = document.getElementById('cursor-dot')
-    let mouseX = 0
-    let mouseY = 0
-    let glowX = 0
-    let glowY = 0
-
-    document.addEventListener('mousemove', function (e) {
-      mouseX = e.clientX
-      mouseY = e.clientY
-      if (dot) {
-        dot.style.left = mouseX + 'px'
-        dot.style.top = mouseY + 'px'
-      }
-    })
-
-    function animateGlow () {
-      glowX += (mouseX - glowX) * 0.18
-      glowY += (mouseY - glowY) * 0.18
-      if (glow) {
-        glow.style.left = glowX + 'px'
-        glow.style.top = glowY + 'px'
-      }
-      requestAnimationFrame(animateGlow)
-    }
-    animateGlow()
-  }
-
-  // Nav scroll effect (subtle shadow on site header)
+  // Header scroll state
   const siteHeader = document.querySelector('.site-header')
   window.addEventListener('scroll', function () {
     if (siteHeader) {
-      siteHeader.classList.toggle('scrolled', window.scrollY > 40)
+      siteHeader.classList.toggle('scrolled', window.scrollY > 24)
     }
-  })
+  }, { passive: true })
 
-  // Mobile nav toggle
+  // Mobile nav
   const toggle = document.getElementById('nav-toggle')
   const navLinks = document.getElementById('nav-links')
   if (toggle && navLinks) {
@@ -57,35 +27,33 @@
     })
   }
 
-  // Intersection Observer for reveal animations
+  // Scroll reveal
   const revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible')
       }
     })
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
+  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' })
 
   document.querySelectorAll('.reveal, .timeline-item, .skill-card, .project-card, .award-item, .repo-card').forEach(function (el, i) {
     if (el.classList.contains('skill-card') || el.classList.contains('project-card') || el.classList.contains('award-item') || el.classList.contains('repo-card')) {
-      el.style.transitionDelay = (i % 4) * 0.04 + 's'
+      el.style.transitionDelay = (i % 4) * 0.05 + 's'
     }
     revealObserver.observe(el)
   })
 
-  // Counter animation for stats
+  // Counter animation
   function animateCounter (el) {
     const target = parseInt(el.getAttribute('data-count'), 10)
     const suffix = el.getAttribute('data-suffix') || ''
-    const duration = 900
+    const duration = 1000
     const start = performance.now()
 
     function update (now) {
-      const elapsed = now - start
-      const progress = Math.min(elapsed / duration, 1)
+      const progress = Math.min((now - start) / duration, 1)
       const eased = 1 - Math.pow(1 - progress, 3)
-      const current = Math.round(eased * target)
-      el.textContent = current + suffix
+      el.textContent = Math.round(eased * target) + suffix
       if (progress < 1) requestAnimationFrame(update)
     }
     requestAnimationFrame(update)
@@ -93,16 +61,9 @@
 
   const statsObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        const el = entry.target
-        if (!el.dataset.animated) {
-          el.dataset.animated = 'true'
-          const presetSuffix = el.getAttribute('data-suffix')
-          if (presetSuffix) {
-            el.setAttribute('data-suffix', presetSuffix)
-          }
-          animateCounter(el)
-        }
+      if (entry.isIntersecting && !entry.target.dataset.animated) {
+        entry.target.dataset.animated = 'true'
+        animateCounter(entry.target)
       }
     })
   }, { threshold: 0.5 })
@@ -111,32 +72,110 @@
     statsObserver.observe(el)
   })
 
-  // Smooth scroll for anchor links
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'))
+      const href = this.getAttribute('href')
+      if (href.length < 2) return
+      const target = document.querySelector(href)
       if (target) {
         e.preventDefault()
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' })
       }
     })
   })
 
-  // Active nav link on scroll
+  // Active nav link
   const sections = document.querySelectorAll('section[id]')
   if (sections.length) {
     window.addEventListener('scroll', function () {
       let current = ''
       sections.forEach(function (section) {
-        const top = section.offsetTop - 120
-        if (window.scrollY >= top) current = section.getAttribute('id')
-      })
-      document.querySelectorAll('.nav-link').forEach(function (link) {
-        link.classList.remove('active')
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active')
+        if (window.scrollY >= section.offsetTop - 100) {
+          current = section.getAttribute('id')
         }
       })
+      document.querySelectorAll('.nav-link[href^="#"]').forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current)
+      })
+    }, { passive: true })
+  }
+
+  // Story carousel (Mercury-style 1/3)
+  const storyCarousel = document.getElementById('story-carousel')
+  if (storyCarousel) {
+    const slides = storyCarousel.querySelectorAll('.story-slide')
+    const counter = document.getElementById('story-counter')
+    const prevBtn = document.getElementById('story-prev')
+    const nextBtn = document.getElementById('story-next')
+    let currentSlide = 0
+    let autoplayTimer
+
+    function goToSlide (index) {
+      currentSlide = (index + slides.length) % slides.length
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('is-active', i === currentSlide)
+      })
+      if (counter) {
+        counter.textContent = (currentSlide + 1) + ' / ' + slides.length
+      }
+    }
+
+    function startAutoplay () {
+      if (prefersReducedMotion) return
+      clearInterval(autoplayTimer)
+      autoplayTimer = setInterval(function () {
+        goToSlide(currentSlide + 1)
+      }, 6000)
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        goToSlide(currentSlide - 1)
+        startAutoplay()
+      })
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        goToSlide(currentSlide + 1)
+        startAutoplay()
+      })
+    }
+
+    goToSlide(0)
+    startAutoplay()
+  }
+
+  // Feature tabs
+  const featureTabs = document.getElementById('feature-tabs')
+  if (featureTabs) {
+    const tabBtns = featureTabs.querySelectorAll('.tab-btn')
+    const tabPanels = featureTabs.querySelectorAll('.tab-panel')
+
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const tab = btn.getAttribute('data-tab')
+        tabBtns.forEach(function (b) {
+          const active = b === btn
+          b.classList.toggle('is-active', active)
+          b.setAttribute('aria-selected', active ? 'true' : 'false')
+        })
+        tabPanels.forEach(function (panel) {
+          panel.classList.toggle('is-active', panel.getAttribute('data-panel') === tab)
+        })
+      })
     })
+  }
+
+  // Hero demo option cycling
+  const demoOptions = document.querySelectorAll('.demo-option')
+  if (demoOptions.length && !prefersReducedMotion) {
+    let demoIndex = 0
+    setInterval(function () {
+      demoIndex = (demoIndex + 1) % demoOptions.length
+      demoOptions.forEach(function (opt, i) {
+        opt.classList.toggle('is-active', i === demoIndex)
+      })
+    }, 3200)
   }
 })()
