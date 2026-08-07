@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Shubhransh Gupta — Senior iOS Engineer crafting seamless mobile experiences at Lenskart. Swift, SwiftUI, CI/CD, and scalable architecture.">
   <title>Shubhransh Gupta — Senior iOS Engineer</title>
-  <link rel="icon" href="assets/images/sg-mark.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/images/sg-mark.svg">
+  <link rel="icon" href="assets/images/sg-mark.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/sg-mark.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2.3">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.2">
 </head>
-<body>
-  <div class="cosmic-bg" aria-hidden="true">
-    <canvas id="cosmic-canvas"></canvas>
-    <div class="cosmic-fallback"></div>
-    <div class="cosmic-vignette"></div>
-    <div class="cosmic-grain"></div>
-  </div>
+<body class="has-hero-scene">
   <header class="site-header" id="site-header">
     <nav class="nav" id="nav">
       <div class="nav-inner">
         <a href="index.html" class="nav-brand" aria-label="Shubhransh Gupta">
-          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="36" height="36">
+          <img src="assets/images/sg-mark.svg?v=2" alt="" class="nav-mark" width="36" height="36">
           <span class="nav-brand-name">Shubhransh Gupta</span>
         </a>
         <div class="nav-links" id="nav-links">
@@ -44,7 +38,13 @@
 
   <main>
     <section class="hero command-hero">
-      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-scene" aria-hidden="true">
+        <video class="hero-scene__video" autoplay muted loop playsinline poster="assets/images/cofounder-scene/hero-poster.webp">
+          <source src="assets/images/cofounder-scene/hero-scene.webm" type="video/webm">
+        </video>
+        <div class="hero-scene__shade"></div>
+        <div class="hero-scene__pixels"></div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">Senior iOS Engineer · Bengaluru</p>
@@ -53,31 +53,6 @@
           <div class="hero-actions">
             <a href="#experience" class="btn btn-primary">View my work</a>
             <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-secondary" download="Shubhransh-Gupta-Resume.pdf">Download resume</a>
-          </div>
-        </div>
-
-        <div class="hero-demo reveal" data-delay="120">
-          <div class="demo-shell">
-            <div class="demo-topbar">
-              <span class="demo-dot"></span>
-              <span class="demo-dot"></span>
-              <span class="demo-dot"></span>
-              <span class="demo-title">iOS · Build Console</span>
-            </div>
-            <div class="demo-body">
-              <p class="demo-label">Your mobile operator</p>
-              <div class="shimmer-line" aria-hidden="true"><span></span></div>
-              <p class="demo-prompt">Which architecture should power the new checkout flow?</p>
-              <ul class="demo-options">
-                <li class="demo-option is-active"><span>1</span> MVVM + Combine · modular pods</li>
-                <li class="demo-option"><span>2</span> SwiftUI feature modules · SPM</li>
-                <li class="demo-option"><span>3</span> VIPER · legacy UIKit bridge</li>
-              </ul>
-              <div class="demo-footer">
-                <span>Review and ship every release.</span>
-                <span class="demo-status">99.9% crash-free</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -453,7 +428,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/cosmic-bg.js?v=2.1"></script>
-  <script src="assets/js/main.js?v=2.1"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

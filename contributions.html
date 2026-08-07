@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Shubhransh Gupta's GitHub repositories, open source contributions, and technical writing on Medium.">
   <title>Contributions — Shubhransh Gupta</title>
-  <link rel="icon" href="assets/images/sg-mark.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/images/sg-mark.svg">
+  <link rel="icon" href="assets/images/sg-mark.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/sg-mark.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2.4">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.1">
 </head>
 <body>
-  <div class="cosmic-bg" aria-hidden="true">
-    <canvas id="cosmic-canvas"></canvas>
-    <div class="cosmic-fallback"></div>
-    <div class="cosmic-vignette"></div>
-    <div class="cosmic-grain"></div>
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__base"></div>
+    <img class="page-bg__decor page-bg__decor--left" src="assets/images/cofounder-scene/clouds-left.png" alt="">
+    <img class="page-bg__decor page-bg__decor--right" src="assets/images/cofounder-scene/clouds-right.png" alt="">
   </div>
   <header class="site-header" id="site-header">
     <nav class="nav" id="nav">
       <div class="nav-inner">
         <a href="index.html" class="nav-brand" aria-label="Shubhransh Gupta">
-          <img src="assets/images/sg-mark.svg" alt="" class="nav-mark" width="36" height="36">
+          <img src="assets/images/sg-mark.svg?v=2" alt="" class="nav-mark" width="36" height="36">
           <span class="nav-brand-name">Shubhransh Gupta</span>
         </a>
         <div class="nav-links" id="nav-links">
@@ -42,6 +41,7 @@
     </nav>
   </header>
 
+  <main>
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow reveal">Open Source & Writing</p>
@@ -111,14 +111,10 @@
 
       <p class="section-label reveal">Repositories</p>
       <h2 class="section-title reveal" style="margin-bottom: 16px;">GitHub Projects</h2>
-      <p class="repos-live-note reveal">Synced live from GitHub — new repositories appear automatically.</p>
+      <p class="repos-live-note reveal">Top recent repositories from GitHub — visit my profile for the full list.</p>
       <h3 class="repos-section-title reveal">@shubhransh-gupta <span class="repos-section-count" data-repo-total="shubhransh-gupta">Loading…</span></h3>
 
-      <div class="repos-grid" id="repos-primary"></div>
-
-      <h3 class="repos-section-title reveal" style="margin-top: 64px;">@ShubhranshGupta <span class="repos-section-count" data-repo-total="ShubhranshGupta">Loading…</span></h3>
-
-      <div class="repos-grid" id="repos-secondary"></div>
+      <div class="repos-grid repos-grid--featured" id="repos-primary"></div>
 
       <div class="medium-section">
         <p class="section-label reveal">Technical Writing</p>
@@ -155,14 +151,15 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <p class="footer-text">© 2026 <a href="index.html">Shubhransh Gupta</a> · Crafted with precision in Bengaluru</p>
     </div>
   </footer>
 
-  <script src="assets/js/cosmic-bg.js?v=2.1"></script>
-  <script src="assets/js/main.js?v=2.1"></script>
-  <script src="assets/js/contributions.js?v=1.0"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
+  <script src="assets/js/contributions.js?v=1.1"></script>
 </body>
 </html>

@@ -167,15 +167,4 @@
     })
   }
 
-  // Hero demo option cycling
-  const demoOptions = document.querySelectorAll('.demo-option')
-  if (demoOptions.length && !prefersReducedMotion) {
-    let demoIndex = 0
-    setInterval(function () {
-      demoIndex = (demoIndex + 1) % demoOptions.length
-      demoOptions.forEach(function (opt, i) {
-        opt.classList.toggle('is-active', i === demoIndex)
-      })
-    }, 3200)
-  }
 })()
