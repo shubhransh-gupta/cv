@@ -1430,6 +1430,37 @@ ul, ol {
   font-weight: 600;
   margin-bottom: 24px;
   color: var(--text-secondary);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.repos-section-count {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.repos-live-note {
+  margin: -8px 0 32px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.repos-loading,
+.repos-empty,
+.repos-error {
+  grid-column: 1 / -1;
+  padding: 28px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.repos-error .project-badge {
+  margin-top: 16px;
 }
 
 .repos-grid {
