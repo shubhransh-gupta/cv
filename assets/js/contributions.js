@@ -1,18 +1,19 @@
 (function () {
   'use strict'
 
+  var TOP_REPOS = 5
+
   var ACCOUNTS = [
     {
       username: 'shubhransh-gupta',
-      profileId: 'github-profile-primary',
       reposId: 'repos-primary',
-      statPrefix: 'primary'
+      statPrefix: 'primary',
+      showRepos: true
     },
     {
       username: 'ShubhranshGupta',
-      profileId: 'github-profile-secondary',
-      reposId: 'repos-secondary',
-      statPrefix: 'secondary'
+      statPrefix: 'secondary',
+      showRepos: false
     }
   ]
 
@@ -32,16 +33,11 @@
     C: '#555555',
     'C++': '#f34b7d',
     PHP: '#4F5D95',
-    Ruby: '#701516',
-    Go: '#00ADD8',
-    Rust: '#dea584',
-    Kotlin: '#A97BFF',
-    Shell: '#89e051',
     Makefile: '#427819'
   }
 
   function langColor (language) {
-    return LANG_COLORS[language] || '#5266eb'
+    return LANG_COLORS[language] || '#34a853'
   }
 
   function formatUpdated (isoDate) {
@@ -79,22 +75,13 @@
     return fetchJson('https://api.github.com/users/' + encodeURIComponent(username))
   }
 
-  async function fetchAllRepos (username) {
-    var repos = []
-    var page = 1
+  async function fetchRecentRepos (username, limit) {
+    var batch = await fetchJson(
+      'https://api.github.com/users/' + encodeURIComponent(username) +
+      '/repos?per_page=' + limit + '&sort=pushed&direction=desc'
+    )
 
-    while (true) {
-      var batch = await fetchJson(
-        'https://api.github.com/users/' + encodeURIComponent(username) +
-        '/repos?per_page=100&sort=pushed&direction=desc&page=' + page
-      )
-      if (!batch.length) break
-      repos = repos.concat(batch)
-      if (batch.length < 100) break
-      page += 1
-    }
-
-    return repos.sort(function (a, b) {
+    return batch.sort(function (a, b) {
       return new Date(b.pushed_at) - new Date(a.pushed_at)
     })
   }
@@ -132,14 +119,19 @@
     )
   }
 
-  function renderReposGrid (container, repos, username) {
+  function renderReposSection (container, repos, username, totalRepos) {
     if (!repos.length) {
       container.innerHTML = '<p class="repos-empty">No public repositories found for @' + escapeHtml(username) + '.</p>'
       return
     }
 
-    container.innerHTML = repos.map(renderRepoCard).join('')
-    container.setAttribute('data-repo-count', String(repos.length))
+    var footer =
+      '<div class="repos-more reveal visible">' +
+        '<p>Showing ' + repos.length + ' of ' + totalRepos + ' public repositories.</p>' +
+        '<a href="https://github.com/' + escapeHtml(username) + '?tab=repositories" target="_blank" rel="noopener" class="btn btn-secondary">View all on GitHub →</a>' +
+      '</div>'
+
+    container.innerHTML = repos.map(renderRepoCard).join('') + footer
   }
 
   function renderError (container, username) {
@@ -155,32 +147,41 @@
   }
 
   async function loadAccount (account) {
-    var reposContainer = document.getElementById(account.reposId)
-    if (!reposContainer) return
+    var reposContainer = account.reposId ? document.getElementById(account.reposId) : null
 
-    renderLoading(reposContainer)
+    if (reposContainer) {
+      renderLoading(reposContainer)
+    }
 
     try {
       var user = await fetchUser(account.username)
-      var repos = await fetchAllRepos(account.username)
 
       setStat(account.statPrefix, 'repos', user.public_repos)
       setStat(account.statPrefix, 'followers', user.followers)
       setStat(account.statPrefix, 'following', user.following)
 
+      if (!account.showRepos || !reposContainer) return
+
+      var repos = await fetchRecentRepos(account.username, TOP_REPOS)
+
       var countEl = document.querySelector('[data-repo-total="' + account.username + '"]')
       if (countEl) {
-        countEl.textContent = repos.length + ' public repositories'
+        countEl.textContent = 'Top ' + TOP_REPOS + ' · ' + user.public_repos + ' total'
       }
 
-      renderReposGrid(reposContainer, repos, account.username)
+      renderReposSection(reposContainer, repos, account.username, user.public_repos)
     } catch (error) {
       console.warn('Contributions fetch failed for ' + account.username, error)
-      renderError(reposContainer, account.username)
+      if (reposContainer) {
+        renderError(reposContainer, account.username)
+      }
     }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('visible')
+    })
     ACCOUNTS.forEach(loadAccount)
   })
 })()
