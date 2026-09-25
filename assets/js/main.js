@@ -15,15 +15,54 @@
   const toggle = document.getElementById('nav-toggle')
   const navLinks = document.getElementById('nav-links')
   if (toggle && navLinks) {
-    toggle.addEventListener('click', function () {
-      toggle.classList.toggle('active')
-      navLinks.classList.toggle('open')
+    let backdrop = document.getElementById('nav-backdrop')
+    if (!backdrop) {
+      backdrop = document.createElement('div')
+      backdrop.id = 'nav-backdrop'
+      backdrop.className = 'nav-backdrop'
+      backdrop.setAttribute('aria-hidden', 'true')
+      document.body.appendChild(backdrop)
+    }
+
+    function closeNav () {
+      toggle.classList.remove('active')
+      navLinks.classList.remove('open')
+      if (siteHeader) siteHeader.classList.remove('nav-open')
+      document.body.classList.remove('nav-open')
+      if (backdrop) backdrop.classList.remove('active')
+    }
+
+    function openNav () {
+      toggle.classList.add('active')
+      navLinks.classList.add('open')
+      if (siteHeader) siteHeader.classList.add('nav-open')
+      document.body.classList.add('nav-open')
+      if (backdrop) backdrop.classList.add('active')
+    }
+
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation()
+      if (navLinks.classList.contains('open')) {
+        closeNav()
+      } else {
+        openNav()
+      }
     })
+
+    if (backdrop) {
+      backdrop.addEventListener('click', closeNav)
+    }
+
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        toggle.classList.remove('active')
-        navLinks.classList.remove('open')
+        closeNav()
       })
+    })
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeNav()
+      }
     })
   }
 
