@@ -1,0 +1,128 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\raggedbottom
+\raggedright
+
+%----------SECTION STYLE----------
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\large
+}{}{0em}{}[\titlerule \vspace{-6pt}]
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeSubheading}[4]{
+  \vspace{4pt}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}
+  \vspace{-6pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge \textbf{Shubhransh Gupta}} \\[4pt]
+    Bengaluru, India \quad • \quad 
+    \href{mailto:gupta.subhransh@gmail.com}{gupta.subhransh@gmail.com} \quad • \quad 
+    +91-9108017934 \quad • \quad 
+    \href{https://shubhransh-gupta.github.io/cv/}{Portfolio}
+\end{center}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+
+\resumeSubheading
+{Pocket FM}{Aug 2026 -- Present}
+{SDE 2}{Bengaluru, India}
+\resumeItemListStart
+\item Independently engineered the complete Store Revamp V2 featuring fluid, high-performance animations; integrated coin purchasing via Apple In-App Purchases (StoreKit), Juspay payment gateway, and rewarded ad views to unlock audio episodes.
+\item Spearheaded performance optimization and hang-free detection; monitored and sanitized multi-threaded execution across GCD queues, resolving main-thread stalls, eliminating crashes via Crashlytics, and elevating session stability to 99.9\%.
+\item Architected the Notification \& Tracking Permission revamp, increasing opt-in rates to capture critical user telemetry, hang traces, and crash diagnostics for data-driven app reliability and feature improvements.
+\item Led technical feasibility and end-to-end iOS implementation for Profile Revamp V2, introducing user profile completion with secure email and phone number verification workflows.
+\resumeItemListEnd
+
+\resumeSubheading
+{Navi}{May 2025 -- Mar 2026}
+{SDE 2}{Bengaluru, India}
+\resumeItemListStart
+\item Improved application scalability by migrating lifecycle management to SceneDelegate architecture.
+\item Enabled deep-linking and faster content discovery by integrating CoreSpotlight-based search indexing.
+\item Enhanced modularity and testability by implementing dependency injection using Swinject.
+\resumeItemListEnd
+
+\resumeSubheading
+{MakeMyTrip}{Jan 2024 -- May 2025}
+{Senior Software Engineer (SDE-2)}{Bengaluru, India}
+\resumeItemListStart
+\item Improved user experience by developing features like Zero Cancellation, Free Date Change Insurance, and advanced Sort \& Filter using SwiftUI.
+\item Accelerated feature integration by implementing Unified Flights SDK using SPM and CocoaPods across multiple architectural patterns.
+\item Increased team productivity by leading an iOS pod and conducting knowledge-sharing sessions on best practices.
+\resumeItemListEnd
+
+\resumeSubheading
+{Nuclei}{May 2021 -- Dec 2023}
+{iOS Developer (SDE-1)}{Bengaluru, India}
+\resumeItemListStart
+\item Delivered core banking features including Fund Transfer, Scan \& Pay, and onboarding, improving mobile banking usability.
+\item Achieved regulatory compliance by integrating UPI using NPCI CL Library and successfully completing certification.
+\item Improved app performance and data consistency by optimizing CoreData migrations and concurrency handling.
+\resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+
+\resumeSubheading
+{BNM Institute of Technology}{Aug 2017 -- Jun 2021}
+{B.E. Computer Science \hfill GPA: 8.45/10}{Bengaluru, India}
+
+%-----------SKILLS-----------
+\section{Skills}
+\resumeItemListStart
+\item \textbf{Languages \& Frameworks:} Swift, SwiftUI, UIKit, CoreData, StoreKit, APNS, Concurrency, Combine, Observable
+\item \textbf{Tools:} Xcode, Git, GitHub, Bitbucket, Jira, App Store Connect, TestFlight, Juspay, Crashlytics, Instruments
+\item \textbf{Concepts:} MVVM, MVP, VIPER, MVC, Dependency Injection, Hang Detection, CI/CD, Multi-threading
+\resumeItemListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubheading
+{Cobalion - AI Compliance Monitoring Platform}{2025}
+{Hackathon Project -- Awarded Best Innovative Project (Navi)}{}
+\resumeItemListStart
+\item Built an AI-driven platform to automatically scrape regulatory circulars from NPCI and SEBI (PDF/HTML) and process them using LLM-based contextual analysis.
+\item Designed alerting workflows to notify relevant stakeholders on compliance gaps, improving response time to regulatory changes.
+\resumeItemListEnd
+
+\resumeSubheading
+{POGO}{2022}
+{Nuclei Hackathon Project}{}
+\resumeItemListStart
+\item Developed a gift voucher platform using Swift (iOS), Python (backend), and MySQL, enabling reward-based recharge workflows.
+\resumeItemListEnd
+
+%-----------AWARDS-----------
+\section{Awards}
+\resumeItemListStart
+\item Innovative Project Labs Summer Championship Award, BNM Institute of Technology (2018)
+\item Ranked 1 at college level on GeeksForGeeks (2021)
+\resumeItemListEnd
+
+\end{document}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+  @page {
+    size: A4;
+    margin: 14mm 16mm 14mm 16mm;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", Times, serif;
+    font-size: 9.6pt;
+    line-height: 1.28;
+    color: #000;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-size: 21pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", Times, serif;
+  }
+  .header-contacts {
+    font-size: 9.2pt;
+    color: #111;
+  }
+  .header-contacts a {
+    color: #000;
+    text-decoration: none;
+  }
+  .sep {
+    margin: 0 5px;
+    color: #444;
+  }
+  .section-title {
+    font-variant: small-caps;
+    font-size: 11.5pt;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    border-bottom: 0.75pt solid #000;
+    padding-bottom: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 5px;
+  }
+  .job-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-style: italic;
+    font-size: 9.3pt;
+    margin-bottom: 2px;
+  }
+  .company {
+    font-weight: bold;
+    font-size: 9.8pt;
+  }
+  .date {
+    font-size: 9.2pt;
+    text-align: right;
+  }
+  .role {
+    font-style: italic;
+  }
+  .location {
+    font-style: italic;
+    font-size: 9.2pt;
+    text-align: right;
+  }
+  ul {
+    list-margin: 0;
+    padding-left: 18px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+  li {
+    margin-bottom: 2px;
+    font-size: 9.4pt;
+    text-align: justify;
+  }
+  .skills-list {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+  .skills-list li {
+    margin-bottom: 2.5px;
+  }
+  b, strong {
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Shubhransh Gupta</h1>
+  <div class="header-contacts">
+    Bengaluru, India <span class="sep">•</span>
+    <a href="mailto:gupta.subhransh@gmail.com">gupta.subhransh@gmail.com</a> <span class="sep">•</span>
+    +91-9108017934 <span class="sep">•</span>
+    <a href="https://shubhransh-gupta.github.io/cv/">Portfolio</a>
+  </div>
+</div>
+
+<div class="section-title">Work Experience</div>
+
+<div class="job-header">
+  <span class="company">Pocket FM</span>
+  <span class="date">Aug 2026 – Present</span>
+</div>
+<div class="job-sub">
+  <span class="role">SDE 2</span>
+  <span class="location">Bengaluru, India</span>
+</div>
+<ul>
+  <li>Independently engineered the complete <b>Store Revamp V2</b> featuring fluid, high-performance animations; integrated coin purchasing via <b>Apple In-App Purchases (StoreKit)</b>, <b>Juspay payment gateway</b>, and rewarded ad views to unlock audio episodes.</li>
+  <li>Spearheaded performance optimization and <b>hang-free detection</b>; monitored and sanitized multi-threaded execution across GCD queues, resolving main-thread stalls, eliminating crashes via Crashlytics, and elevating session stability to 99.9%.</li>
+  <li>Architected the <b>Notification &amp; Tracking Permission revamp</b>, increasing opt-in rates to capture critical user telemetry, hang traces, and crash diagnostics for data-driven app reliability and feature improvements.</li>
+  <li>Led technical feasibility and end-to-end iOS implementation for <b>Profile Revamp V2</b>, introducing user profile completion with secure <b>email and phone number verification</b> workflows.</li>
+</ul>
+
+<div class="job-header">
+  <span class="company">Navi</span>
+  <span class="date">May 2025 – Mar 2026</span>
+</div>
+<div class="job-sub">
+  <span class="role">SDE 2</span>
+  <span class="location">Bengaluru, India</span>
+</div>
+<ul>
+  <li>Improved application scalability by migrating lifecycle management to SceneDelegate architecture.</li>
+  <li>Enabled deep-linking and faster content discovery by integrating CoreSpotlight-based search indexing.</li>
+  <li>Enhanced modularity and testability by implementing dependency injection using Swinject.</li>
+</ul>
+
+<div class="job-header">
+  <span class="company">MakeMyTrip</span>
+  <span class="date">Jan 2024 – May 2025</span>
+</div>
+<div class="job-sub">
+  <span class="role">Senior Software Engineer (SDE-2)</span>
+  <span class="location">Bengaluru, India</span>
+</div>
+<ul>
+  <li>Improved user experience by developing features like Zero Cancellation, Free Date Change Insurance, and advanced Sort &amp; Filter using SwiftUI.</li>
+  <li>Accelerated feature integration by implementing Unified Flights SDK using SPM and CocoaPods across multiple architectural patterns.</li>
+  <li>Increased team productivity by leading an iOS pod and conducting knowledge-sharing sessions on best practices.</li>
+</ul>
+
+<div class="job-header">
+  <span class="company">Nuclei</span>
+  <span class="date">May 2021 – Dec 2023</span>
+</div>
+<div class="job-sub">
+  <span class="role">iOS Developer (SDE-1)</span>
+  <span class="location">Bengaluru, India</span>
+</div>
+<ul>
+  <li>Delivered core banking features including Fund Transfer, Scan &amp; Pay, and onboarding, improving mobile banking usability.</li>
+  <li>Achieved regulatory compliance by integrating UPI using NPCI CL Library and successfully completing certification.</li>
+  <li>Improved app performance and data consistency by optimizing CoreData migrations and concurrency handling.</li>
+</ul>
+
+<div class="section-title">Education</div>
+<div class="job-header">
+  <span class="company">BNM Institute of Technology</span>
+  <span class="date">Aug 2017 – Jun 2021</span>
+</div>
+<div class="job-sub">
+  <span class="role">B.E. Computer Science &nbsp;|&nbsp; GPA: 8.45/10</span>
+  <span class="location">Bengaluru, India</span>
+</div>
+
+<div class="section-title">Skills</div>
+<ul class="skills-list">
+  <li><b>Languages &amp; Frameworks:</b> Swift, SwiftUI, UIKit, CoreData, StoreKit, APNS, Concurrency, Combine, Observable</li>
+  <li><b>Tools:</b> Xcode, Git, GitHub, Bitbucket, Jira, App Store Connect, TestFlight, Juspay, Crashlytics, Instruments</li>
+  <li><b>Concepts:</b> MVVM, MVP, VIPER, MVC, Dependency Injection, Hang Detection, CI/CD, Multi-threading</li>
+</ul>
+
+<div class="section-title">Projects</div>
+<div class="job-header">
+  <span class="company">Cobalion - AI Compliance Monitoring Platform</span>
+  <span class="date">2025</span>
+</div>
+<div class="job-sub">
+  <span class="role">Hackathon Project – Awarded Best Innovative Project (Navi)</span>
+  <span class="location"></span>
+</div>
+<ul>
+  <li>Built an AI-driven platform to automatically scrape regulatory circulars from NPCI and SEBI (PDF/HTML) and process them using LLM-based contextual analysis.</li>
+  <li>Designed alerting workflows to notify relevant stakeholders on compliance gaps, improving response time to regulatory changes.</li>
+</ul>
+
+<div class="job-header">
+  <span class="company">POGO</span>
+  <span class="date">2022</span>
+</div>
+<div class="job-sub">
+  <span class="role">Nuclei Hackathon Project</span>
+  <span class="location"></span>
+</div>
+<ul>
+  <li>Developed a gift voucher platform using Swift (iOS), Python (backend), and MySQL, enabling reward-based recharge workflows.</li>
+</ul>
+
+<div class="section-title">Awards</div>
+<ul class="skills-list">
+  <li>Innovative Project Labs Summer Championship Award, BNM Institute of Technology (2018)</li>
+  <li>Ranked 1 at college level on GeeksForGeeks (2021)</li>
+</ul>
+
+</body>
+</html>
