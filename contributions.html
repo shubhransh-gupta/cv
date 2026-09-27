@@ -109,6 +109,76 @@
         </div>
       </div>
 
+      <!-- Open Source & Big Tech PRs Section -->
+      <div class="oss-prs-section" style="margin-top: 60px; margin-bottom: 60px;">
+        <p class="section-label reveal">Core Contributions</p>
+        <h2 class="section-title reveal" style="margin-bottom: 16px;">Open Source &amp; Big Tech PRs</h2>
+        <p class="repos-live-note reveal" style="margin-bottom: 28px;">Merged code and architectural fixes across Apple, Google, AppLovin SDKs, and developer toolchains.</p>
+
+        <div class="projects-grid">
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+            <p class="project-year">Apple · Swift CLI</p>
+            <h3>apple/swift-argument-parser</h3>
+            <p>Resolved a core flag-parsing edge case in Apple's official Swift CLI framework where <code>--opt=</code> silently consumed subsequent positional tokens. Merged in PR #961.</p>
+            <div class="project-links">
+              <a href="https://github.com/apple/swift-argument-parser/pull/961" target="_blank" rel="noopener" class="project-badge">View PR #961 →</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+            <p class="project-year">Google · Security Tooling</p>
+            <h3>google/osv-scanner</h3>
+            <p>Fixed vulnerability report checklist filter state preservation in HTML output, preventing inadvertent menu dismissals when toggling vulnerability criteria. Merged in PR #3049 &amp; #3088.</p>
+            <div class="project-links">
+              <a href="https://github.com/google/osv-scanner/pull/3049" target="_blank" rel="noopener" class="project-badge">View PR #3049 →</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Contributor</span>
+            <p class="project-year">AppLovin · Mobile SDKs</p>
+            <h3>AppLovin MAX SDKs (React Native, Flutter, Unity)</h3>
+            <p>Authored fixes across official AppLovin SDKs: resolved layout &amp; adapter sizing constraints in React Native (#488), eliminated duplicate view mount lifecycle leaks (#487), and updated Android compileSdk 36 build compatibility in Flutter (#366).</p>
+            <div class="project-links">
+              <a href="https://github.com/AppLovin/AppLovin-MAX-React-Native/pull/488" target="_blank" rel="noopener" class="project-badge">View PR #488 →</a>
+              <a href="https://github.com/AppLovin/AppLovin-MAX-Flutter/pull/366" target="_blank" rel="noopener" class="project-badge">View PR #366 →</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+            <p class="project-year">Apple · Serialization Engine</p>
+            <h3>apple/swift-protobuf</h3>
+            <p>Added <code>useDeterministicOrdering</code> to TextFormat encoding options, guaranteeing reproducible serialization across golden test verification suites. Merged in PR #2159.</p>
+            <div class="project-links">
+              <a href="https://github.com/apple/swift-protobuf/pull/2159" target="_blank" rel="noopener" class="project-badge">View PR #2159 →</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+            <p class="project-year">Apple Silicon · Machine Learning</p>
+            <h3>ml-explore/mlx-swift (Apple ML)</h3>
+            <p>Corrected convolution padding bounds calculation in <code>convolve</code> for even kernels in same mode across Apple Silicon unified memory GPUs. Merged in PR #467 &amp; #481.</p>
+            <div class="project-links">
+              <a href="https://github.com/ml-explore/mlx-swift/pull/467" target="_blank" rel="noopener" class="project-badge">View PR #467 →</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card-new reveal">
+            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+            <p class="project-year">Fastlane · CI/CD Automation</p>
+            <h3>fastlane/fastlane (sigh)</h3>
+            <p>Fixed duplicate prefix injection in <code>application-identifier</code> entitlements during resign operations, preventing code signing rejections on app submission. Merged in PR #30169.</p>
+            <div class="project-links">
+              <a href="https://github.com/fastlane/fastlane/pull/30169" target="_blank" rel="noopener" class="project-badge">View PR #30169 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p class="section-label reveal">Repositories</p>
       <h2 class="section-title reveal" style="margin-bottom: 16px;">GitHub Projects</h2>
       <p class="repos-live-note reveal">Top recent repositories from GitHub — visit my profile for the full list.</p>
