@@ -1,49 +1,49 @@
 \documentclass[a4paper,10pt]{article}
 
-\usepackage[empty]{fullpage}
+\usepackage[a4paper,left=0.45in,right=0.45in,top=0.38in,bottom=0.38in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
 
 \pagestyle{empty}
-
-%----------MARGINS----------
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-0.7in}
-\addtolength{\textheight}{1.4in}
-
 \raggedbottom
 \raggedright
+\setlength{\tabcolsep}{0pt}
+\urlstyle{same}
 
 %----------SECTION STYLE----------
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\large
-}{}{0em}{}[\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\scshape\large
+}{}{0em}{}[\titlerule \vspace{-4pt}]
 
 %----------CUSTOM COMMANDS----------
 \newcommand{\resumeSubheading}[4]{
   \vspace{4pt}
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
+    \textbf{#1} & \small #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}
-  \vspace{-6pt}
+  \vspace{-5pt}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=2pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.16in, itemsep=1.8pt, topsep=2.5pt, parsep=0pt]\small}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 \begin{document}
 
 %----------HEADER----------
 \begin{center}
     {\Huge \textbf{Shubhransh Gupta}} \\[4pt]
-    Bengaluru, India \quad • \quad 
-    \href{mailto:gupta.subhransh@gmail.com}{gupta.subhransh@gmail.com} \quad • \quad 
-    +91-9108017934 \quad • \quad 
-    \href{https://shubhransh-gupta.github.io/cv/}{Portfolio}
+    {\small
+    \faMapMarker*\enspace Bengaluru, India \quad $\cdot$ \quad
+    \href{mailto:gupta.subhransh@gmail.com}{\faEnvelope\enspace gupta.subhransh@gmail.com} \quad $\cdot$ \quad
+    \faPhone*\enspace +91-9108017934 \quad $\cdot$ \quad
+    \href{https://shubhransh.is-a.dev}{\faGlobe\enspace \textbf{Portfolio}} \quad $\cdot$ \quad
+    \href{https://github.com/shubhransh-gupta}{\faGithub\enspace \textbf{GitHub}}
+    }
 \end{center}
+\vspace{-6pt}
 
 %-----------WORK EXPERIENCE-----------
 \section{Work Experience}
@@ -52,76 +52,84 @@
 {Pocket FM}{Aug 2026 -- Present}
 {SDE 2}{Bengaluru, India}
 \resumeItemListStart
-\item \textbf{Store Revamp V2:} Engineered end-to-end with high-FPS animations, integrating coin purchases via \textbf{Apple StoreKit (IAP)}, \textbf{Juspay} gateway, and rewarded ads to unlock audio episodes.
-\item \textbf{Hang \& Crash Optimization:} Monitored and sanitized GCD queues to eliminate main-thread stalls, achieving a \textbf{100\% hang-free} store experience and \textbf{99.9\% crash-free} stability.
-\item \textbf{Profile \& Telemetry Revamp:} Architected \textbf{Profile Revamp V2} with email/phone OTP verification, and overhauled tracking permission flows to capture crash \& hang diagnostics.
+\item Improved crash-free sessions from \textbf{99.4\% to 99.6\%} by fixing critical memory leaks and stability bugs.
+\item Built \textbf{Profile Revamp v1 \& v2} with smart sign-up nudges, boosting user onboarding conversion.
+\item Integrated \textbf{in-stream, mid-stream, and post-stream audio ads} across shows for monetization.
 \resumeItemListEnd
 
 \resumeSubheading
 {Navi}{May 2025 -- Mar 2026}
 {SDE 2}{Bengaluru, India}
 \resumeItemListStart
-\item Improved application scalability by migrating lifecycle management to SceneDelegate architecture.
-\item Enabled deep-linking and faster content discovery by integrating CoreSpotlight-based search indexing.
-\item Enhanced modularity and testability by implementing dependency injection using Swinject.
+\item Improved app scalability and startup reliability by migrating lifecycle to \textbf{SceneDelegate architecture}.
+\item Enabled deep-linking and faster content discovery by integrating \textbf{CoreSpotlight} search indexing.
+\item Enhanced modularity and unit testability by implementing dependency injection using \textbf{Swinject}.
 \resumeItemListEnd
 
 \resumeSubheading
 {MakeMyTrip}{Jan 2024 -- May 2025}
 {Senior Software Engineer (SDE-2)}{Bengaluru, India}
 \resumeItemListStart
-\item Improved user experience by developing features like Zero Cancellation, Free Date Change Insurance, and advanced Sort \& Filter using SwiftUI.
-\item Accelerated feature integration by implementing Unified Flights SDK using SPM and CocoaPods across multiple architectural patterns.
-\item Increased team productivity by leading an iOS pod and conducting knowledge-sharing sessions on best practices.
+\item Shipped \textbf{Zero Cancellation, Free Date Change Insurance, and Sort \& Filter} using \textbf{SwiftUI}.
+\item Accelerated feature integration by building the \textbf{Unified Flights SDK} using \textbf{SPM and CocoaPods}.
+\item Increased team productivity by leading an iOS pod and conducting Swift best-practice sessions.
 \resumeItemListEnd
 
 \resumeSubheading
 {Nuclei}{May 2021 -- Dec 2023}
 {iOS Developer (SDE-1)}{Bengaluru, India}
 \resumeItemListStart
-\item Delivered core banking features including Fund Transfer, Scan \& Pay, and onboarding, improving mobile banking usability.
-\item Achieved regulatory compliance by integrating UPI using NPCI CL Library and successfully completing certification.
-\item Improved app performance and data consistency by optimizing CoreData migrations and concurrency handling.
+\item Delivered core banking features including \textbf{Fund Transfer, Scan \& Pay, and Onboarding}.
+\item Achieved regulatory compliance by integrating \textbf{UPI via NPCI CL Library} and passing certification.
+\item Improved app performance and data consistency by optimizing \textbf{CoreData migrations} and concurrency.
 \resumeItemListEnd
 
-%-----------EDUCATION-----------
-\section{Education}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeItemListStart
+\item \textbf{Languages \& Frameworks:} Swift, SwiftUI, UIKit, Combine, Concurrency, Observable, CoreData, CoreSpotlight, APNS
+\item \textbf{Tools:} Xcode, Git, GitHub, Bitbucket, Jira, App Store Connect, TestFlight, Fastlane, CleverTap, Gerrit
+\item \textbf{Architecture \& Concepts:} MVVM, VIPER, MVP, MVC, Dependency Injection (Swinject), SPM, CocoaPods, CI/CD
+\resumeItemListEnd
+
+%-----------OPEN SOURCE COLLABORATIONS-----------
+\section{Open Source Collaborations}
 
 \resumeSubheading
-{BNM Institute of Technology}{Aug 2017 -- Jun 2021}
-{B.E. Computer Science \hfill GPA: 8.45/10}{Bengaluru, India}
-
-%-----------SKILLS-----------
-\section{Skills}
+{Apple \& Swift Ecosystem}{2025 -- Present}
+{Merged: \href{https://github.com/apple/swift-argument-parser/pull/961}{\underline{swift-argument-parser \#961}}, \href{https://github.com/apple/swift-protobuf/pull/2159}{\underline{swift-protobuf \#2159}}, \href{https://github.com/apple/swift-openapi-runtime/pull/214}{\underline{swift-openapi-runtime \#214}}, \href{https://github.com/ml-explore/mlx-swift/pull/467}{\underline{mlx-swift \#467}}}{Apple Upstream}
 \resumeItemListStart
-\item \textbf{Languages \& Frameworks:} Swift, SwiftUI, UIKit, CoreData, StoreKit, APNS, Concurrency, Combine, Observable
-\item \textbf{Tools:} Xcode, Git, GitHub, Bitbucket, Jira, App Store Connect, TestFlight, Juspay, Crashlytics, Instruments
-\item \textbf{Concepts:} MVVM, MVP, VIPER, MVC, Dependency Injection, Hang Detection, CI/CD, Multi-threading
+\item Fixed CLI flag parsing in \textbf{\texttt{swift-argument-parser} (\#961)} and setters in \textbf{\texttt{swift-openapi-runtime} (\#214)}.
+\item Added \texttt{useDeterministicOrdering} to \textbf{\texttt{swift-protobuf} (\#2159)} and fixed GPU padding in \textbf{\texttt{mlx-swift} (\#467)}.
+\resumeItemListEnd
+
+\resumeSubheading
+{AppLovin, Google \& Fastlane}{2025 -- Present}
+{Merged: \href{https://github.com/AppLovin/AxonCache/pull/57}{\underline{AppLovin/AxonCache \#57}}, \href{https://github.com/google/osv-scanner/pull/3049}{\underline{google/osv-scanner \#3049}}, \href{https://github.com/fastlane/fastlane/pull/30169}{\underline{fastlane \#30169}}}{Upstream Contributor}
+\resumeItemListStart
+\item Resolved C++20 \texttt{atomic\_store} deprecation on \texttt{shared\_ptr} in \textbf{AppLovin's \texttt{AxonCache} (\#57)} engine.
+\item Merged fixes into \textbf{Google's \texttt{osv-scanner} (\#3049)} (HTML filter) and \textbf{Fastlane \texttt{sigh} (\#30169)} (iOS signing).
 \resumeItemListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
-
-\resumeSubheading
-{Cobalion - AI Compliance Monitoring Platform}{2025}
-{Hackathon Project -- Awarded Best Innovative Project (Navi)}{}
+\vspace{2pt}
 \resumeItemListStart
-\item Built an AI-driven platform to automatically scrape regulatory circulars from NPCI and SEBI (PDF/HTML) and process them using LLM-based contextual analysis.
-\item Designed alerting workflows to notify relevant stakeholders on compliance gaps, improving response time to regulatory changes.
+\item \textbf{ShubhranshProxy} (\href{https://shubhransh-gupta.github.io/ShubhranshProxy/}{\faGlobe} \href{https://github.com/shubhransh-gupta/ShubhranshProxy}{\faGithub}): Native macOS HTTP(S) proxy in \textbf{Swift} with SSL decrypt, Map Local \& HAR export.
+\item \textbf{MirrorLock} (\href{https://shubhransh-gupta.github.io/mirrorLock}{\faGlobe} \href{https://github.com/shubhransh-gupta/mirrorLock}{\faGithub}): Native macOS menu bar app mirroring live AI agent runs with \textbf{Touch ID} input lock.
+\item \textbf{JSONLens} (\href{https://shubhransh-gupta.github.io/jsonlens/}{\faGlobe} \href{https://github.com/shubhransh-gupta/jsonlens}{\faGithub}): Privacy-first JSON playground to format, validate, diff, and visualize node graphs.
+\item \textbf{Cobalion} (\textit{Best Innovative Project -- Navi 2025}): LLM platform to scrape \textbf{NPCI/SEBI} circulars and alert gaps.
+\item \textbf{POGO} (\textit{Nuclei Hackathon 2022}): Gift voucher and reward recharge platform built with \textbf{Swift, Python, and MySQL}.
 \resumeItemListEnd
 
-\resumeSubheading
-{POGO}{2022}
-{Nuclei Hackathon Project}{}
-\resumeItemListStart
-\item Developed a gift voucher platform using Swift (iOS), Python (backend), and MySQL, enabling reward-based recharge workflows.
-\resumeItemListEnd
+%-----------EDUCATION & AWARDS-----------
+\section{Education \& Awards}
 
-%-----------AWARDS-----------
-\section{Awards}
+\resumeSubheading
+{BNM Institute of Technology}{Aug 2017 -- Jun 2021}
+{B.E. in Computer Science \enspace $|$ \enspace GPA: 8.45/10}{Bengaluru, India}
 \resumeItemListStart
-\item Innovative Project Labs Summer Championship Award, BNM Institute of Technology (2018)
-\item Ranked 1 at college level on GeeksForGeeks (2021)
+\item \textbf{Awards:} Ranked \textbf{\#1 at College Level} on GeeksForGeeks (2021) \enspace $\cdot$ \enspace \textbf{Summer Championship Award}, BNMIT (2018).
 \resumeItemListEnd
 
 \end{document}
