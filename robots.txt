@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Canonical Sitemap & AI Directives
+Sitemap: https://shubhransh.is-a.dev/sitemap.xml
+llms-txt: https://shubhransh.is-a.dev/llms.txt
