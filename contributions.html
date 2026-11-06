@@ -9,21 +9,20 @@
   <link rel="apple-touch-icon" href="assets/images/sg-mark.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=3.3">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=7.3">
 </head>
-<body>
-  <div class="page-bg" aria-hidden="true">
-    <div class="page-bg__base"></div>
-    <img class="page-bg__decor page-bg__decor--left" src="assets/images/cofounder-scene/clouds-left.png" alt="">
-    <img class="page-bg__decor page-bg__decor--right" src="assets/images/cofounder-scene/clouds-right.png" alt="">
-  </div>
-  <header class="site-header" id="site-header">
-    <nav class="nav" id="nav">
-      <div class="nav-inner">
+<body class="nature-heaven-theme">
+  <canvas id="nature-canvas" aria-hidden="true"></canvas>
+  <header class="site-header scrolled" id="site-header">
+    <nav class="nav">
+      <div class="container nav-inner">
         <a href="index.html" class="nav-brand" aria-label="Shubhransh Gupta">
-          <img src="assets/images/sg-mark.svg?v=2" alt="" class="nav-mark" width="36" height="36">
-          <span class="nav-brand-name">Shubhransh Gupta</span>
+          <img src="assets/images/sg-mark.svg?v=2" alt="Shubhransh Gupta logo" class="nav-mark" width="38" height="38">
+          <div class="nav-brand-title">
+            <span class="nav-brand-name">Shubhransh Gupta</span>
+            <span class="nav-brand-role">Senior iOS Developer</span>
+          </div>
         </a>
         <div class="nav-links" id="nav-links">
           <a href="index.html#experience" class="nav-link">Experience</a>
@@ -31,10 +30,10 @@
           <a href="index.html#projects" class="nav-link">Projects</a>
           <a href="contributions.html" class="nav-link active">Contributions</a>
           <a href="recommendations.html" class="nav-link">Recommendations</a>
-          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="nav-link" download="Shubhransh-Gupta-Resume.pdf">Resume</a>
-          <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="nav-link" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
         </div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <a href="index.html#contact" class="nav-cta">Let's Talk ↗</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -44,9 +43,9 @@
   <main>
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow reveal">Open Source & Writing</p>
-      <h1 class="hero-title reveal">Code, craft &amp;<br><span class="gradient">contributions</span></h1>
-      <p class="hero-subtitle reveal" style="margin-inline: auto; text-align: center;">
+      <p class="cursive-eyebrow reveal">Open Source &amp; Writing</p>
+      <h1 class="cursive-hero-title reveal">Code, craft &amp;<br><span class="cursive-accent">contributions</span></h1>
+      <p class="hero-subtitle reveal" style="margin-inline: auto; text-align: center; max-width: 640px; font-size: 1.1rem; color: var(--text-mist);">
         Explore my GitHub repositories, side projects, and technical articles on iOS development and software engineering.
       </p>
     </div>
@@ -77,7 +76,7 @@
             </div>
             <div class="profile-actions">
               <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="btn btn-primary">View Main Profile →</a>
-              <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Download Resume</a>
+              <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
             </div>
           </div>
         </div>
@@ -209,27 +208,54 @@
     </div>
   </section>
 
-  <section class="contact-section" style="padding-top: 80px;">
+  <section class="contact-section" id="contact">
+    <div class="contact-tree-decor" aria-hidden="true">
+      <img src="assets/images/cofounder-scene/right-top-decor.png" alt="" class="tree-canopy-decor">
+      <img src="assets/images/cofounder-scene/left-decor.png" alt="" class="tree-hill-decor">
+    </div>
+    <div class="contact-cloud-decor" aria-hidden="true">
+      <div class="sky-cloud sky-cloud--1"></div>
+      <div class="sky-cloud sky-cloud--2"></div>
+      <div class="sky-bird sky-bird--1">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
+      </div>
+      <div class="sky-bird sky-bird--2">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
+      </div>
+    </div>
     <div class="container">
-      <h2 class="section-title reveal">Interested in collaborating?</h2>
-      <p class="section-desc reveal">Whether it's open source, a side project, or a full-time role — I'd love to connect.</p>
-      <div class="hero-actions reveal" style="justify-content: center;">
-        <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
-        <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Download Resume</a>
+      <div class="contact-cloud-space reveal">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Interested in collaborating?</h2>
+        <p class="section-desc">
+          Whether it's open source, a side project, or a full-time role — my inbox is always open.
+        </p>
+
+        <div class="liquid-button-cluster" id="collab-liquid-cluster">
+          <div class="liquid-follower" aria-hidden="true"></div>
+          <a href="index.html#contact" class="liquid-btn active-liquid">Get in Touch ✉</a>
+          <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="liquid-btn">GitHub ↗</a>
+          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="liquid-btn" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
+        </div>
       </div>
     </div>
   </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-text">© 2026 <a href="index.html">Shubhransh Gupta</a> · Crafted with precision in Bengaluru</p>
+  <footer class="site-footer">
+    <div class="footer-pixels" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <p class="footer-text">© 2026 <a href="index.html">Shubhransh Gupta</a> · Rooted in Bengaluru · Mobile Architect &amp; Open Source Engineer</p>
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contributions.html" class="footer-link">Contributions</a>
+        <a href="recommendations.html" class="footer-link">Recommendations</a>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=3.0"></script>
+  <script src="assets/js/main.js?v=7.2"></script>
   <script src="assets/js/contributions.js?v=1.1"></script>
 </body>
 </html>
