@@ -1754,15 +1754,12 @@ section {
   padding: 160px 0 130px;
   color: #ffffff;
   background:
-    linear-gradient(180deg, rgba(238, 243, 234, 0.94) 0%, rgba(20, 38, 25, 0.82) 22%, rgba(12, 24, 16, 0.92) 100%),
-    url('../images/cofounder-scene/hero-poster.webp') right center / cover no-repeat;
+    linear-gradient(180deg, rgba(246, 250, 246, 0.94) 0%, rgba(16, 38, 22, 0.72) 20%, rgba(8, 20, 12, 0.88) 100%),
+    url('../images/meadowbell/ch1.jpg') center 40% / cover no-repeat;
 }
 
 .contact-tree-decor {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .tree-canopy-decor {
@@ -2287,9 +2284,8 @@ html.js-animating .reveal:not(.visible) {
    -------------------------------------------------------------------------- */
 .meadowbell-hero {
   position: relative;
-  min-height: 82vh;
-  min-height: 82dvh;
-  padding: 130px 0 80px;
+  min-height: auto;
+  padding: 108px 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2310,22 +2306,22 @@ html.js-animating .reveal:not(.visible) {
   overflow: hidden;
 }
 
-.meadowbell-plate {
+.meadowbell-plate,
+.meadowbell-video {
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: -6.25%;
   width: 100%;
-  height: 100%;
-  background: url('../images/meadowbell/plate.jpg') center bottom / cover no-repeat;
+  height: 112.5%;
+  object-fit: cover;
+  display: block;
+}
+
+.meadowbell-plate {
   z-index: 1;
 }
 
 .meadowbell-video {
-  position: absolute;
-  top: -6.25%;
-  left: 0;
-  width: 100%;
-  height: 112.5%;
-  object-fit: cover;
   z-index: 2;
   pointer-events: none;
 }
@@ -2333,7 +2329,7 @@ html.js-animating .reveal:not(.visible) {
 .meadowbell-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 50, 90, 0.32) 0%, rgba(20, 50, 90, 0.08) 40%, rgba(16, 40, 24, 0.42) 100%);
+  background: linear-gradient(180deg, rgba(20, 50, 90, 0.28) 0%, rgba(20, 50, 90, 0.06) 40%, rgba(16, 40, 24, 0.38) 100%);
   z-index: 3;
   pointer-events: none;
 }
@@ -2348,28 +2344,51 @@ html.js-animating .reveal:not(.visible) {
 }
 
 .meadowbell-kicker {
-  font-family: 'Grandstander', cursive, sans-serif;
-  font-weight: 900;
-  font-size: clamp(1.05rem, 2.2vw, 1.7rem);
-  letter-spacing: 0.16em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0 3px 14px rgba(28, 70, 120, 0.5);
+  letter-spacing: 0.08em;
+  color: #a7f3d0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
   margin-bottom: 12px;
 }
 
 .meadowbell-title {
-  font-family: 'Grandstander', cursive, sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 5.8vw, 4.6rem);
-  line-height: 1.05;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.15;
   color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-shadow:
-    0 4px 22px rgba(28, 70, 120, 0.4),
-    0 2px 4px rgba(0, 0, 0, 0.45);
-  margin-bottom: 18px;
+    0 2px 14px rgba(10, 24, 16, 0.55),
+    0 0 35px rgba(255, 255, 255, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.8);
+  margin-bottom: 14px;
+}
+
+.meadowbell-title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: #fef08a;
+  text-shadow:
+    0 0 25px rgba(245, 158, 11, 0.7),
+    0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.meadowbell-title .cursive-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: #fef08a;
+  text-shadow:
+    0 0 25px rgba(245, 158, 11, 0.7),
+    0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .meadowbell-title span {
@@ -2381,12 +2400,12 @@ html.js-animating .reveal:not(.visible) {
 
 .meadowbell-subline {
   font-family: 'Inter', var(--font-body), sans-serif;
-  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-size: clamp(1.02rem, 1.35vw, 1.15rem);
   font-weight: 400;
   line-height: 1.6;
   color: #ffffff;
   max-width: 680px;
-  margin: 0 auto 28px;
+  margin: 0 auto 20px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -2396,7 +2415,7 @@ html.js-animating .reveal:not(.visible) {
   justify-content: center;
   align-items: center;
   gap: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .btn-meadowbell-white {
@@ -2540,11 +2559,11 @@ html.js-animating .reveal:not(.visible) {
 }
 
 .meadowbell-rec-body .rec-name {
-  font-family: 'Grandstander', var(--font-display), cursive, serif;
-  font-size: 1.45rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--text-canopy);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .meadowbell-rec-body .rec-text {
