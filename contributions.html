@@ -9,11 +9,12 @@
   <link rel="apple-touch-icon" href="assets/images/sg-mark.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=7.3">
+  <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@700;800;900&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=7.4">
 </head>
 <body class="nature-heaven-theme">
   <canvas id="nature-canvas" aria-hidden="true"></canvas>
+
   <header class="site-header scrolled" id="site-header">
     <nav class="nav">
       <div class="container nav-inner">
@@ -40,206 +41,272 @@
     </nav>
   </header>
 
-  <main>
-  <section class="page-hero">
-    <div class="container">
-      <p class="cursive-eyebrow reveal">Open Source &amp; Writing</p>
-      <h1 class="cursive-hero-title reveal">Code, craft &amp;<br><span class="cursive-accent">contributions</span></h1>
-      <p class="hero-subtitle reveal" style="margin-inline: auto; text-align: center; max-width: 640px; font-size: 1.1rem; color: var(--text-mist);">
-        Explore my GitHub repositories, side projects, and technical articles on iOS development and software engineering.
-      </p>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <section style="padding-top: 0;">
-    <div class="container">
-      <div class="github-profiles">
-        <div class="github-profile reveal">
-          <img class="github-avatar" src="https://avatars.githubusercontent.com/u/54713516?v=4" alt="Shubhransh Gupta">
-          <div class="github-info">
-            <p class="github-profile-label">Primary GitHub</p>
-            <h2>Shubhransh Gupta</h2>
-            <p>@shubhransh-gupta · iOS Engineer · Swift · SwiftUI · Open source & side projects</p>
-            <div class="github-stats-row">
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="primary-repos">—</div>
-                <div class="github-stat-label">Repositories</div>
-              </div>
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="primary-followers">—</div>
-                <div class="github-stat-label">Followers</div>
-              </div>
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="primary-following">—</div>
-                <div class="github-stat-label">Following</div>
-              </div>
-            </div>
-            <div class="profile-actions">
-              <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="btn btn-primary">View Main Profile →</a>
-              <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="github-profile github-profile--secondary reveal">
-          <img class="github-avatar" src="https://avatars.githubusercontent.com/u/84120671?v=4" alt="Shubhransh Gupta">
-          <div class="github-info">
-            <p class="github-profile-label">Secondary GitHub</p>
-            <h2>ShubhranshGupta</h2>
-            <p>@ShubhranshGupta · Early projects & learning repositories</p>
-            <div class="github-stats-row">
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="secondary-repos">—</div>
-                <div class="github-stat-label">Repositories</div>
-              </div>
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="secondary-followers">—</div>
-                <div class="github-stat-label">Followers</div>
-              </div>
-              <div class="github-stat">
-                <div class="github-stat-num" data-stat="secondary-following">—</div>
-                <div class="github-stat-label">Following</div>
-              </div>
-            </div>
-            <div class="profile-actions">
-              <a href="https://github.com/ShubhranshGupta" target="_blank" rel="noopener" class="btn btn-ghost">View Profile →</a>
-            </div>
-          </div>
-        </div>
+    <!-- ====================================================================
+         MEADOWBELL NATURE HERO (SUNNY ANIME AFTERNOON SCENE)
+         ==================================================================== -->
+    <section class="meadowbell-hero" id="contrib-hero">
+      <div class="meadowbell-scene" aria-hidden="true">
+        <div class="meadowbell-plate"></div>
+        <video class="meadowbell-video" autoplay muted loop playsinline poster="assets/images/meadowbell/plate.jpg">
+          <source src="assets/images/meadowbell/video.mp4" type="video/mp4">
+        </video>
+        <div class="meadowbell-shade"></div>
       </div>
 
-      <!-- Open Source & Big Tech PRs Section -->
-      <div class="oss-prs-section" style="margin-top: 60px; margin-bottom: 60px;">
-        <p class="section-label reveal">Core Contributions</p>
-        <h2 class="section-title reveal" style="margin-bottom: 16px;">Open Source &amp; Big Tech PRs</h2>
-        <p class="repos-live-note reveal" style="margin-bottom: 28px;">Merged code and architectural fixes across Apple, Google, AppLovin SDKs, and developer toolchains.</p>
-
-        <div class="projects-grid">
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
-            <p class="project-year">Apple · Swift CLI</p>
-            <h3>apple/swift-argument-parser</h3>
-            <p>Resolved a core flag-parsing edge case in Apple's official Swift CLI framework where <code>--opt=</code> silently consumed subsequent positional tokens. Merged in PR #961.</p>
-            <div class="project-links">
-              <a href="https://github.com/apple/swift-argument-parser/pull/961" target="_blank" rel="noopener" class="project-badge">View PR #961 →</a>
-            </div>
-          </div>
-
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
-            <p class="project-year">Google · Security Tooling</p>
-            <h3>google/osv-scanner</h3>
-            <p>Fixed vulnerability report checklist filter state preservation in HTML output, preventing inadvertent menu dismissals when toggling vulnerability criteria. Merged in PR #3049 &amp; #3088.</p>
-            <div class="project-links">
-              <a href="https://github.com/google/osv-scanner/pull/3049" target="_blank" rel="noopener" class="project-badge">View PR #3049 →</a>
-            </div>
-          </div>
-
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Contributor</span>
-            <p class="project-year">AppLovin · Mobile SDKs</p>
-            <h3>AppLovin MAX SDKs (React Native, Flutter, Unity)</h3>
-            <p>Authored fixes across official AppLovin SDKs: resolved layout &amp; adapter sizing constraints in React Native (#488), eliminated duplicate view mount lifecycle leaks (#487), and updated Android compileSdk 36 build compatibility in Flutter (#366).</p>
-            <div class="project-links">
-              <a href="https://github.com/AppLovin/AppLovin-MAX-React-Native/pull/488" target="_blank" rel="noopener" class="project-badge">View PR #488 →</a>
-              <a href="https://github.com/AppLovin/AppLovin-MAX-Flutter/pull/366" target="_blank" rel="noopener" class="project-badge">View PR #366 →</a>
-            </div>
-          </div>
-
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
-            <p class="project-year">Apple · Serialization Engine</p>
-            <h3>apple/swift-protobuf</h3>
-            <p>Added <code>useDeterministicOrdering</code> to TextFormat encoding options, guaranteeing reproducible serialization across golden test verification suites. Merged in PR #2159.</p>
-            <div class="project-links">
-              <a href="https://github.com/apple/swift-protobuf/pull/2159" target="_blank" rel="noopener" class="project-badge">View PR #2159 →</a>
-            </div>
-          </div>
-
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
-            <p class="project-year">Apple Silicon · Machine Learning</p>
-            <h3>ml-explore/mlx-swift (Apple ML)</h3>
-            <p>Corrected convolution padding bounds calculation in <code>convolve</code> for even kernels in same mode across Apple Silicon unified memory GPUs. Merged in PR #467 &amp; #481.</p>
-            <div class="project-links">
-              <a href="https://github.com/ml-explore/mlx-swift/pull/467" target="_blank" rel="noopener" class="project-badge">View PR #467 →</a>
-            </div>
-          </div>
-
-          <div class="project-card project-card-new reveal">
-            <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
-            <p class="project-year">Fastlane · CI/CD Automation</p>
-            <h3>fastlane/fastlane (sigh)</h3>
-            <p>Fixed duplicate prefix injection in <code>application-identifier</code> entitlements during resign operations, preventing code signing rejections on app submission. Merged in PR #30169.</p>
-            <div class="project-links">
-              <a href="https://github.com/fastlane/fastlane/pull/30169" target="_blank" rel="noopener" class="project-badge">View PR #30169 →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="section-label reveal">Repositories</p>
-      <h2 class="section-title reveal" style="margin-bottom: 16px;">GitHub Projects</h2>
-      <p class="repos-live-note reveal">Top recent repositories from GitHub — visit my profile for the full list.</p>
-      <h3 class="repos-section-title reveal">@shubhransh-gupta <span class="repos-section-count" data-repo-total="shubhransh-gupta">Loading…</span></h3>
-
-      <div class="repos-grid repos-grid--featured" id="repos-primary"></div>
-
-      <div class="medium-section">
-        <p class="section-label reveal">Technical Writing</p>
-        <h2 class="section-title reveal" style="margin-bottom: 48px;">Medium Articles</h2>
-        <p class="section-desc reveal">I write about iOS development, Swift patterns, and lessons from building production apps.</p>
-
-        <div class="medium-cards">
-          <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="medium-card reveal">
-            <h3>iOS Development Insights</h3>
-            <p>Articles covering Swift, UIKit, SwiftUI, architecture patterns, and real-world mobile engineering challenges.</p>
-          </a>
-          <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="medium-card reveal">
-            <h3>Engineering Best Practices</h3>
-            <p>Thoughts on code quality, testing strategies, CI/CD pipelines, and team collaboration in iOS teams.</p>
-          </a>
-          <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="medium-card reveal">
-            <h3>Read All Articles →</h3>
-            <p>Visit my Medium profile for the full collection of technical writing and engineering notes.</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact">
-    <div class="contact-tree-decor" aria-hidden="true">
-      <img src="assets/images/cofounder-scene/right-top-decor.png" alt="" class="tree-canopy-decor">
-      <img src="assets/images/cofounder-scene/left-decor.png" alt="" class="tree-hill-decor">
-    </div>
-    <div class="contact-cloud-decor" aria-hidden="true">
-      <div class="sky-cloud sky-cloud--1"></div>
-      <div class="sky-cloud sky-cloud--2"></div>
-      <div class="sky-bird sky-bird--1">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
-      </div>
-      <div class="sky-bird sky-bird--2">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
-      </div>
-    </div>
-    <div class="container">
-      <div class="contact-cloud-space reveal">
-        <p class="section-label">Get in Touch</p>
-        <h2 class="section-title">Interested in collaborating?</h2>
-        <p class="section-desc">
-          Whether it's open source, a side project, or a full-time role — my inbox is always open.
+      <div class="meadowbell-content reveal">
+        <p class="meadowbell-kicker">OPEN SOURCE &amp; WRITING</p>
+        <h1 class="meadowbell-title">
+          CODE, CRAFT &amp;<br><span>CONTRIBUTIONS</span>
+        </h1>
+        <p class="meadowbell-subline">
+          58+ public repositories, open-source toolchain PRs merged across Apple and Google, and in-depth engineering publications on iOS architecture and on-device machine learning.
         </p>
 
-        <div class="liquid-button-cluster" id="collab-liquid-cluster">
-          <div class="liquid-follower" aria-hidden="true"></div>
-          <a href="index.html#contact" class="liquid-btn active-liquid">Get in Touch ✉</a>
-          <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="liquid-btn">GitHub ↗</a>
-          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="liquid-btn" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
+        <div class="meadowbell-actions">
+          <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="btn-meadowbell-white">
+            GitHub Profile ↗
+          </a>
+          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn-meadowbell-mint" download="Shubhransh-Gupta-Resume.pdf">
+            ↓ Resume
+          </a>
+        </div>
+
+        <span class="meadowbell-pill-badge">🍃 58+ Repositories · Big Tech OSS Contributor</span>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         GITHUB PROFILES & ECOSYSTEM
+         ==================================================================== -->
+    <section style="padding: 70px 0 30px;">
+      <div class="container">
+        <div class="github-profiles">
+          <div class="github-profile reveal">
+            <img class="github-avatar" src="https://avatars.githubusercontent.com/u/54713516?v=4" alt="Shubhransh Gupta">
+            <div class="github-info">
+              <p class="github-profile-label">Primary GitHub</p>
+              <h2>Shubhransh Gupta</h2>
+              <p>@shubhransh-gupta · iOS Engineer · Swift · SwiftUI · Open source &amp; side projects</p>
+              <div class="github-stats-row">
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="primary-repos">—</div>
+                  <div class="github-stat-label">Repositories</div>
+                </div>
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="primary-followers">—</div>
+                  <div class="github-stat-label">Followers</div>
+                </div>
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="primary-following">—</div>
+                  <div class="github-stat-label">Following</div>
+                </div>
+              </div>
+              <div class="profile-actions">
+                <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="btn btn-primary">View Main Profile →</a>
+                <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="btn btn-download" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="github-profile github-profile--secondary reveal">
+            <img class="github-avatar" src="https://avatars.githubusercontent.com/u/84120671?v=4" alt="Shubhransh Gupta">
+            <div class="github-info">
+              <p class="github-profile-label">Secondary GitHub</p>
+              <h2>ShubhranshGupta</h2>
+              <p>@ShubhranshGupta · Early projects &amp; learning repositories</p>
+              <div class="github-stats-row">
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="secondary-repos">—</div>
+                  <div class="github-stat-label">Repositories</div>
+                </div>
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="secondary-followers">—</div>
+                  <div class="github-stat-label">Followers</div>
+                </div>
+                <div class="github-stat">
+                  <div class="github-stat-num" data-stat="secondary-following">—</div>
+                  <div class="github-stat-label">Following</div>
+                </div>
+              </div>
+              <div class="profile-actions">
+                <a href="https://github.com/ShubhranshGupta" target="_blank" rel="noopener" class="btn btn-ghost">View Profile →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open Source & Big Tech PRs Section -->
+        <div class="oss-prs-section" style="margin-top: 60px; margin-bottom: 60px;">
+          <p class="section-label reveal">Core Contributions</p>
+          <h2 class="section-title reveal" style="margin-bottom: 16px;">Open Source &amp; Big Tech PRs</h2>
+          <p class="repos-live-note reveal" style="margin-bottom: 28px;">Merged code and architectural fixes across Apple, Google, AppLovin SDKs, and developer toolchains.</p>
+
+          <div class="projects-grid">
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+              <p class="project-year">Apple · Swift CLI</p>
+              <h3>apple/swift-argument-parser</h3>
+              <p>Resolved a core flag-parsing edge case in Apple's official Swift CLI framework where <code>--opt=</code> silently consumed subsequent positional tokens. Merged in PR #961.</p>
+              <div class="project-links">
+                <a href="https://github.com/apple/swift-argument-parser/pull/961" target="_blank" rel="noopener" class="project-badge">View PR #961 →</a>
+              </div>
+            </div>
+
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+              <p class="project-year">Google · Security Tooling</p>
+              <h3>google/osv-scanner</h3>
+              <p>Fixed vulnerability report checklist filter state preservation in HTML output, preventing inadvertent menu dismissals when toggling vulnerability criteria. Merged in PR #3049 &amp; #3088.</p>
+              <div class="project-links">
+                <a href="https://github.com/google/osv-scanner/pull/3049" target="_blank" rel="noopener" class="project-badge">View PR #3049 →</a>
+              </div>
+            </div>
+
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Contributor</span>
+              <p class="project-year">AppLovin · Mobile SDKs</p>
+              <h3>AppLovin MAX SDKs (React Native, Flutter, Unity)</h3>
+              <p>Authored fixes across official AppLovin SDKs: resolved layout &amp; adapter sizing constraints in React Native (#488), eliminated duplicate view mount lifecycle leaks (#487), and updated Android compileSdk 36 build compatibility in Flutter (#366).</p>
+              <div class="project-links">
+                <a href="https://github.com/AppLovin/AppLovin-MAX-React-Native/pull/488" target="_blank" rel="noopener" class="project-badge">View PR #488 →</a>
+                <a href="https://github.com/AppLovin/AppLovin-MAX-Flutter/pull/366" target="_blank" rel="noopener" class="project-badge">View PR #366 →</a>
+              </div>
+            </div>
+
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+              <p class="project-year">Apple · Serialization Engine</p>
+              <h3>apple/swift-protobuf</h3>
+              <p>Added <code>useDeterministicOrdering</code> to TextFormat encoding options, guaranteeing reproducible serialization across golden test verification suites. Merged in PR #2159.</p>
+              <div class="project-links">
+                <a href="https://github.com/apple/swift-protobuf/pull/2159" target="_blank" rel="noopener" class="project-badge">View PR #2159 →</a>
+              </div>
+            </div>
+
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+              <p class="project-year">Apple Silicon · Machine Learning</p>
+              <h3>ml-explore/mlx-swift (Apple ML)</h3>
+              <p>Corrected convolution padding bounds calculation in <code>convolve</code> for even kernels in same mode across Apple Silicon unified memory GPUs. Merged in PR #467 &amp; #481.</p>
+              <div class="project-links">
+                <a href="https://github.com/ml-explore/mlx-swift/pull/467" target="_blank" rel="noopener" class="project-badge">View PR #467 →</a>
+              </div>
+            </div>
+
+            <div class="project-card project-card-new reveal">
+              <span class="promo-badge promo-badge--corner promo-badge--new">Merged</span>
+              <p class="project-year">Fastlane · CI/CD Automation</p>
+              <h3>fastlane/fastlane (sigh)</h3>
+              <p>Fixed duplicate prefix injection in <code>application-identifier</code> entitlements during resign operations, preventing code signing rejections on app submission. Merged in PR #30169.</p>
+              <div class="project-links">
+                <a href="https://github.com/fastlane/fastlane/pull/30169" target="_blank" rel="noopener" class="project-badge">View PR #30169 →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="section-label reveal">Repositories</p>
+        <h2 class="section-title reveal" style="margin-bottom: 16px;">GitHub Projects</h2>
+        <p class="repos-live-note reveal">Top recent repositories from GitHub — visit my profile for the full list.</p>
+        <h3 class="repos-section-title reveal">@shubhransh-gupta <span class="repos-section-count" data-repo-total="shubhransh-gupta">Loading…</span></h3>
+
+        <div class="repos-grid repos-grid--featured" id="repos-primary"></div>
+
+        <!-- ================================================================
+             CHAPTERS OF WRITING (MEDIUM ARTICLES WITH MEADOWBELL ART)
+             ================================================================ -->
+        <div class="medium-section" style="margin-top: 80px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px;" class="reveal">
+            <div>
+              <p class="section-label">Technical Publications</p>
+              <h2 class="section-title" style="margin-bottom: 0;">Medium Articles</h2>
+            </div>
+            <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; color: #5b875c; text-decoration: none;">
+              browse all on Medium ›
+            </a>
+          </div>
+
+          <div class="projects-grid">
+            <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="meadowbell-rec-card reveal" style="text-decoration: none;">
+              <div class="meadowbell-card-thumb">
+                <img src="assets/images/meadowbell/card1.webp" alt="iOS Development Insights" loading="lazy">
+                <div class="meadowbell-play-badge" aria-hidden="true">📖</div>
+              </div>
+              <div class="meadowbell-rec-body">
+                <p class="project-year">Architecture &amp; Patterns</p>
+                <h3 class="rec-name" style="font-size: 1.3rem;">iOS Development Insights</h3>
+                <p class="rec-text">Articles covering Swift concurrency, UIKit/SwiftUI interoperability, clean modular boundaries, and real-world high-traffic mobile architecture challenges.</p>
+                <span class="rec-profile-link">Read on Medium ↗</span>
+              </div>
+            </a>
+
+            <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="meadowbell-rec-card reveal" style="text-decoration: none;">
+              <div class="meadowbell-card-thumb">
+                <img src="assets/images/meadowbell/card2.webp" alt="Engineering Best Practices" loading="lazy">
+                <div class="meadowbell-play-badge" aria-hidden="true">📖</div>
+              </div>
+              <div class="meadowbell-rec-body">
+                <p class="project-year">Quality &amp; Delivery</p>
+                <h3 class="rec-name" style="font-size: 1.3rem;">Engineering Best Practices</h3>
+                <p class="rec-text">Deep-dives into code craftsmanship, automated testing suites, bulletproof CI/CD pipelines with Fastlane, and high-velocity team collaboration strategies.</p>
+                <span class="rec-profile-link">Read on Medium ↗</span>
+              </div>
+            </a>
+
+            <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="meadowbell-rec-card reveal" style="text-decoration: none;">
+              <div class="meadowbell-card-thumb">
+                <img src="assets/images/meadowbell/card3.webp" alt="Full Publication Collection" loading="lazy">
+                <div class="meadowbell-play-badge" aria-hidden="true">📖</div>
+              </div>
+              <div class="meadowbell-rec-body">
+                <p class="project-year">All Publications</p>
+                <h3 class="rec-name" style="font-size: 1.3rem;">Read All Articles</h3>
+                <p class="rec-text">Visit my full Medium publication catalog for practical walkthroughs, architectural notes, and open-source implementation guides.</p>
+                <span class="rec-profile-link">Browse Catalog ↗</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT SECTION (MEADOW & LIQUID UI)
+         ==================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="contact-tree-decor" aria-hidden="true">
+        <img src="assets/images/cofounder-scene/right-top-decor.png" alt="" class="tree-canopy-decor">
+        <img src="assets/images/cofounder-scene/left-decor.png" alt="" class="tree-hill-decor">
+      </div>
+      <div class="contact-cloud-decor" aria-hidden="true">
+        <div class="sky-cloud sky-cloud--1"></div>
+        <div class="sky-cloud sky-cloud--2"></div>
+        <div class="sky-bird sky-bird--1">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
+        </div>
+        <div class="sky-bird sky-bird--2">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2.5 11C6 8 10 8 12 11.5C14 8 18 8 21.5 11C18 13.2 14 12.2 12 15.5C10 12.2 6 13.2 2.5 11Z"/></svg>
+        </div>
+      </div>
+      <div class="container">
+        <div class="contact-cloud-space reveal">
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Interested in collaborating?</h2>
+          <p class="section-desc">
+            Whether it's open source, a side project, or a full-time role — my inbox is always open.
+          </p>
+
+          <div class="liquid-button-cluster" id="collab-liquid-cluster">
+            <div class="liquid-follower" aria-hidden="true"></div>
+            <a href="index.html#contact" class="liquid-btn active-liquid">Get in Touch ✉</a>
+            <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="liquid-btn">GitHub ↗</a>
+            <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="liquid-btn" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
