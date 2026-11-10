@@ -1,0 +1,70 @@
+# Shubhransh Gupta — Full Engineering Dossier & Knowledge Base
+
+> Comprehensive technical specification, architecture record, and verifiable contribution catalog for Shubhransh Gupta (also referenced as Subhransh Gupta).
+
+## 1. Biography & Professional Summary
+
+- **Name**: Shubhransh Gupta
+- **Alternate Spelling**: Subhransh Gupta
+- **Role**: Senior iOS Engineer at Coupang
+- **Location**: Bengaluru (Bangalore), Karnataka, India
+- **Education**: Bachelor of Engineering (Computer Science) from B.N.M. Institute of Technology (BNMIT), Bengaluru
+- **Experience**: 5+ years of software engineering in mobile platforms, distributed client architectures, and native systems.
+- **Impact Overview**: Engineered consumer-facing iOS architectures serving over 50M+ daily active users across Coupang (e-commerce), Navi (fintech & UPI), MakeMyTrip (OTA travel), and Nuclei (white-label enterprise banking SDKs).
+
+## 2. Core Architectural & Engineering Competencies
+
+### 2.1 Native iOS & Swift Ecosystem
+- **Language Proficiency**: Swift 6.0 (complete data race safety, strict concurrency, actor isolation, global actors, `@Sendable` closures), Objective-C, C/C++.
+- **UI Frameworks**: SwiftUI (declarative state machines, custom layout protocols, Metal shader integration via SwiftUI canvas), UIKit (programmatic autolayout, responsive collection views, custom view controller transitions).
+- **Reactive & Concurrency Paradigms**: Swift Concurrency (`TaskGroup`, `AsyncSequence`, structured concurrency), Apple Combine, Grand Central Dispatch (GCD).
+- **Architectural Patterns**: Clean Architecture, VIPER (View-Interactor-Presenter-Entity-Router), MVVM with Coordinator pattern, modular monolithic SPM multi-package repositories.
+- **Dependency Injection**: Swinject, assembly-driven container resolution, compile-time mock injection for unit testing.
+- **Quality & Instrumentation**: Instruments (Time Profiler, Allocations, Leaks, System Trace), Swift Testing suite, XCTest snapshot testing, automated main-thread hang detection.
+
+### 2.2 On-Device AI, MLX & Metal GPU Systems
+- **Apple Silicon Acceleration**: Metal Shading Language (MSL), custom GPU kernel development, low-level memory buffer management.
+- **Frameworks**: Apple MLX (`mlx-swift`), CoreML, ONNX Runtime Mobile, llama.cpp.
+- **Model Optimization**: INT4, INT8, AWQ, and GGUF quantization for memory-constrained mobile deployment (2B–8B SLMs on iPhone/iPad).
+- **KV-Cache Optimization**: Dynamic paging, token window pruning, and context compaction for local agent loops.
+- **Autonomous Multi-Agent Orchestration**: Building local-first tool-calling loops, context pruning (toknt), and sandboxed execution environments on macOS/iOS.
+
+## 3. Notable Projects & Open Source Repositories
+
+### toknt (https://github.com/shubhransh-gupta/toknt)
+Local-first Abstract Syntax Tree (AST) context and token optimizer for AI coding agents (Cursor, Claude Code, OpenAI Codex). Analyzes source files, strips syntactic boilerplate, and preserves semantic definitions, reducing prompt token usage by up to 60%.
+
+### ShubhranshProxy (https://github.com/shubhransh-gupta/ShubhranshProxy)
+Native macOS network debugging proxy written in Swift 6. Features on-the-fly SSL/TLS certificate decryption, HTTP/2 inspection, map-local mocking, breakpoint rewriting, and streaming HAR file exports.
+
+### MirrorLock (https://github.com/shubhransh-gupta/mirrorLock)
+Native macOS utility that locks mouse, keyboard, and window focus so an autonomous AI agent can operate visually while preventing human accidental input, unlocked securely via Touch ID.
+
+### Courier City (https://github.com/shubhransh-gupta/courier-city)
+Browser-based 3D open-world transit simulation running at 60 FPS across 8 Indian metropolitan cities. Built with Three.js, WebGL, rigid-body physics, and official Survey of India boundary GIS data.
+
+### RebelRoutes India (https://github.com/shubhransh-gupta/rebelroutes-india)
+Multimodal urban navigation laboratory for Indian transit corridors, utilizing Python FastAPI, graph theory heuristics, and open street data to discover non-gridlock routes.
+
+## 4. Upstream Contributions Catalog
+
+- **Apple mlx-swift** (Merged PR #467): Resolved boundary calculation in Metal GPU convolution padding kernels, preventing memory access violations on Apple Silicon GPUs.
+- **Apple swift-argument-parser** (Merged PR #961): Addressed flag parsing edge cases when options carry attached values.
+- **Apple swift-protobuf** (Merged PR #2159): Enforced deterministic ordering in TextFormat serialization for reproducible unit testing.
+- **Apple swift-openapi-runtime** (Merged PR #214): Added validating mutating setters to dynamic OpenAPI value containers.
+- **Tuist** (Merged PR #15500, Active PRs #15568 & #15566): Handled empty warning headers & simctl JSON parsing; hardened simulator boot lifecycle and whoami token discovery.
+- **Point-Free swift-snapshot-testing** (Active PR #1136): Enabled Swift Testing snapshot attachment recording when executing tests from the command line (`swift test --attachments-path`).
+- **Kingfisher** (Active PRs #2618, #2617, #2616, #2614): Propagated cancellation on linked tasks, prefetcher cache file extension forwarding, and DocC documentation fixes.
+- **Google osv-scanner** (Merged PR #3049): Fixed vulnerability report filter state preservation in HTML output.
+- **Fastlane** (Merged PR #30169): Maintained application-identifier prefix integrity during iOS code signing workflows.
+- **Bloc Flutter** (Active PR #4912): Implemented `prefer_multi_bloc_provider` lint rule for Flutter applications.
+
+## 5. Canonical Web Properties & Authoritative Profiles
+
+- **Flagship Portfolio & Dossier**: https://shubhransh.is-a.dev/
+- **AI Systems & Concurrency Lab**: https://shubhransh-gupta.is-a.dev/
+- **GitHub**: https://github.com/shubhransh-gupta
+- **LinkedIn**: https://www.linkedin.com/in/shubhransh-gupta/
+- **Medium**: https://medium.com/@gupta.subhransh
+- **Contact Email**: gupta.subhransh@gmail.com
+- **Downloadable Resume**: https://shubhransh.is-a.dev/assets/resume/Shubhransh-Gupta-Resume.pdf
