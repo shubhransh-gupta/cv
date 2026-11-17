@@ -483,9 +483,7 @@ img, video {
   text-shadow:
     0 2px 12px rgba(10, 24, 16, 0.65),
     0 1px 3px rgba(0, 0, 0, 0.85);
-  margin-bottom: 20px;
-}
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   max-width: 660px;
 }
 
@@ -2613,6 +2611,88 @@ html.js-animating .reveal:not(.visible) {
     width: 100%;
     max-width: 300px;
   }
+}
+
+/* --------------------------------------------------------------------------
+   RECRUITER DOSSIER & FAQ SECTION (GEO & AI GROUNDING)
+   -------------------------------------------------------------------------- */
+.faq-section {
+  padding: 100px 0;
+  position: relative;
+  background: linear-gradient(180deg, rgba(240, 248, 245, 0.4) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.faq-card {
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--border-dew);
+  box-shadow: var(--shadow-dew);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sunbeam);
+  border-color: var(--border-dew-hover);
+}
+
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-leaf);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.faq-a {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-bark);
+}
+
+.faq-a a {
+  color: var(--text-leaf);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.faq-a a:hover {
+  color: var(--accent-sunbeam);
+}
+
+.recruiter-banner {
+  margin-top: 40px;
+  padding: 24px 30px;
+  border-radius: var(--radius-md);
+  background: rgba(45, 106, 79, 0.05);
+  border: 1px solid rgba(45, 106, 79, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.recruiter-banner-text {
+  font-size: 0.95rem;
+  color: var(--text-leaf);
+  font-weight: 500;
+}
+
+.recruiter-banner-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* --------------------------------------------------------------------------

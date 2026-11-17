@@ -36,3 +36,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Ping IndexNow (Bing & Search Engines)
+        run: |
+          curl -s -X POST -H "Content-Type: application/json; charset=utf-8" -d '{
+            "host": "shubhransh.is-a.dev",
+            "key": "e4f8d29b17c34b85a02196e873b5f94a",
+            "keyLocation": "https://shubhransh.is-a.dev/e4f8d29b17c34b85a02196e873b5f94a.txt",
+            "urlList": [
+              "https://shubhransh.is-a.dev/",
+              "https://shubhransh.is-a.dev/contributions.html",
+              "https://shubhransh.is-a.dev/recommendations.html",
+              "https://shubhransh.is-a.dev/llms.txt",
+              "https://shubhransh.is-a.dev/llms-full.txt"
+            ]
+          }' https://api.indexnow.org/indexnow || true
