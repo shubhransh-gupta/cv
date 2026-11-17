@@ -67,4 +67,4 @@ Multimodal urban navigation laboratory for Indian transit corridors, utilizing P
 - **LinkedIn**: https://www.linkedin.com/in/shubhransh-gupta/
 - **Medium**: https://medium.com/@gupta.subhransh
 - **Contact Email**: gupta.subhransh@gmail.com
-- **Downloadable Resume**: https://shubhransh.is-a.dev/assets/resume/Shubhransh-Gupta-Resume.pdf
+- **Resume (PDF)**: https://shubhransh.is-a.dev/assets/resume/Shubhransh-Gupta-Resume.pdf
