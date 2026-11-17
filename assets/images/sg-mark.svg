@@ -1,19 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32" shape-rendering="crispEdges">
-  <rect x="2" y="2" width="28" height="28" fill="#262323"/>
-  <rect x="4" y="4" width="24" height="11" fill="#8ecae6"/>
-  <rect x="4" y="15" width="24" height="13" fill="#34a853"/>
-  <rect x="4" y="13" width="24" height="2" fill="#2d9348"/>
-  <rect x="20" y="6" width="4" height="2" fill="#fbfbf8"/>
-  <rect x="22" y="8" width="4" height="2" fill="#fbfbf8"/>
-  <rect x="18" y="8" width="2" height="2" fill="#fbfbf8"/>
-  <rect x="7" y="24" width="2" height="2" fill="#fbbf24"/>
-  <rect x="24" y="22" width="2" height="2" fill="#fbbf24"/>
-  <rect x="9" y="9" width="14" height="9" fill="#262323"/>
-  <rect x="10" y="10" width="12" height="7" fill="#fbfbf8"/>
-  <rect x="11" y="12" width="7" height="1" fill="#34a853"/>
-  <rect x="11" y="14" width="5" height="1" fill="#a76451"/>
-  <rect x="11" y="16" width="6" height="1" fill="#34a853"/>
-  <rect x="7" y="18" width="18" height="2" fill="#262323"/>
-  <rect x="8" y="20" width="16" height="2" fill="#3d3838"/>
-  <rect x="13" y="21" width="6" height="1" fill="#4a4545"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="sgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181514"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </linearGradient>
+    <filter id="sgGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#ff5500" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Obsidian Squircle Container -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="url(#sgBg)" stroke="#2a2624" stroke-width="2"/>
+
+  <!-- Centered Minimalist Monogram: S and G -->
+  <g fill="none" stroke="#f6f4ef" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Modern 'S' -->
+    <path d="M53 43 C49 33, 31 33, 27 42 C23 51, 49 55, 47 70 C45 81, 28 81, 23 72" />
+    
+    <!-- Architectural 'G' -->
+    <path d="M104 49 C97 35, 78 33, 69 44 C58 57, 58 73, 69 85 C80 96, 99 92, 105 79 L105 65 L86 65" />
+  </g>
+
+  <!-- Live Pulse Swift Orange Accent -->
+  <circle cx="106" cy="22" r="8" fill="#ff5500" filter="url(#sgGlow)"/>
+  <circle cx="106" cy="22" r="3.5" fill="#ffffff"/>
 </svg>

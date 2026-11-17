@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions &amp; Architecture Dossier — Shubhransh Gupta</title>
+  <meta name="description" content="Technical FAQs on iOS systems architecture, 50M+ user scale, Swift 6 concurrency, Apple and Google open-source toolchain contributions by Shubhransh Gupta.">
+  <meta name="author" content="Shubhransh Gupta">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="puUA8C8riEi9Y2aPNrF3xbzDqqXx113GGV1hCRUUoUw">
+  <link rel="canonical" href="https://shubhransh.is-a.dev/faq.html">
+
+  <!-- Open Graph / Twitter Cards -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://shubhransh.is-a.dev/faq.html">
+  <meta property="og:title" content="iOS Engineering &amp; Architecture FAQs — Shubhransh Gupta">
+  <meta property="og:description" content="Authoritative technical FAQs on high-scale iOS architectures, Swift 6 concurrency, 99.9% crash-free stability, and Big Tech OSS contributions.">
+  <meta property="og:image" content="https://shubhransh.is-a.dev/assets/images/sg-mark.svg">
+  <meta property="og:site_name" content="Shubhransh Gupta">
+  <meta name="application-name" content="Shubhransh Gupta">
+  <meta name="apple-mobile-web-app-title" content="Shubhransh Gupta">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="iOS Engineering &amp; Architecture FAQs — Shubhransh Gupta">
+  <meta name="twitter:description" content="Authoritative technical FAQs on high-scale iOS architectures, Swift 6 concurrency, 99.9% crash-free stability, and Big Tech OSS contributions.">
+  <meta name="twitter:image" content="https://shubhransh.is-a.dev/assets/images/sg-mark.svg">
+
+  <!-- Schema.org Knowledge Graph + FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shubhransh.is-a.dev/#person",
+        "name": "Shubhransh Gupta",
+        "alternateName": ["Subhransh Gupta", "Shubhransh"],
+        "jobTitle": "Senior iOS Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Coupang"
+        },
+        "url": "https://shubhransh.is-a.dev/",
+        "sameAs": [
+          "https://github.com/shubhransh-gupta",
+          "https://www.linkedin.com/in/shubhransh-gupta/",
+          "https://medium.com/@Shubhransh-Gupta"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://shubhransh.is-a.dev/faq.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Shubhransh Gupta (Subhransh Gupta)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh Gupta (also commonly searched as Subhransh Gupta) is a Senior iOS Engineer based in Bengaluru, India, currently working at Coupang. He has 5+ years of experience architecting mission-critical, large-scale consumer iOS applications across Coupang, Navi (FinTech), MakeMyTrip (OTA Travel), and Nuclei (Mobile Banking SDKs)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What scale and performance metrics has Shubhransh Gupta engineered systems for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh has engineered platforms serving over 50 million consumer users with a verified 99.9% crash-free session rate. His work includes sub-100ms UPI checkout pipelines, zero-regression flight booking funnels, and sub-16ms ProMotion 120Hz UI rendering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are Shubhransh Gupta's open-source contributions across Apple and Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh has contributed upstream code to premier developer toolchains: Apple mlx-swift (Metal GPU convolution bounds checking), Apple swift-argument-parser, Apple swift-protobuf, Apple swift-openapi-runtime, Google osv-scanner, Fastlane, and Tuist."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between shubhransh.is-a.dev and shubhransh-gupta.is-a.dev?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "shubhransh.is-a.dev serves as Shubhransh Gupta's flagship career dossier, production mobile engineering portfolio, and verified recommendations. In contrast, shubhransh-gupta.is-a.dev serves as his experimental systems lab for on-device AI, Metal GPU kernels, and autonomous AI agents."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What architectural patterns does Shubhransh specialize in for iOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh specializes in Swift 6 strict concurrency, The Composable Architecture (TCA), Clean Swift / VIPER for secure financial transactions, modular SPM / Tuist micro-frameworks, and unidirectional data flow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Shubhransh diagnose and prevent iOS memory leaks and hitches?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Using Apple Instruments (Time Profiler, Allocations, Leaks, and System Trace), Shubhransh systematically tracks ARC retain cycles, enforces non-isolated actor boundaries, and offloads heavy JSON deserialization to cooperative background thread pools to ensure uninterrupted 120 FPS scrolling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Shubhransh Gupta's experience with on-device machine learning and Metal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh builds on-device ML workflows leveraging Apple Metal, CoreML quantization, and Apple MLX Swift for running low-latency language and embedding models natively on Apple Silicon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can engineering teams or recruiters contact Shubhransh Gupta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shubhransh can be reached directly via email at gupta.subhransh@gmail.com, via LinkedIn at linkedin.com/in/shubhransh-gupta, or through his GitHub profile at github.com/shubhransh-gupta."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="assets/images/sg-mark.svg?v=9.5" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg?v=9.5" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/sg-mark.svg?v=9.5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/shubhransh-theme.css?v=9.5">
+  <style>
+    .faq-page-hero {
+      padding-top: clamp(100px, 14vh, 140px);
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-card);
+    }
+    .faq-search-box {
+      width: 100%;
+      max-width: 680px;
+      margin: 32px 0 20px;
+      position: relative;
+    }
+    .faq-search-input {
+      width: 100%;
+      padding: 16px 20px 16px 48px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-strong);
+      background: var(--bg-page);
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      outline: none;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .faq-search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+    .faq-category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .faq-cat-btn {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .faq-cat-btn:hover, .faq-cat-btn.active {
+      background: var(--text-main);
+      color: var(--bg-page);
+      border-color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Subtle Swiss Multi-Column Guidelines -->
+  <div class="grid-guidelines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="shubhransh-cursor" id="shubhransh-cursor" aria-hidden="true"></div>
+
+  <!-- Fixed Minimalist Header -->
+  <header class="shubhransh-header" id="shubhransh-header">
+    <div class="container">
+      <div class="shubhransh-nav-inner">
+        <!-- Brand -->
+        <a href="index.html" class="shubhransh-brand" aria-label="Shubhransh Gupta">
+          <span class="shubhransh-brand-badge">SG</span>
+          <div class="shubhransh-brand-text">
+            <span class="shubhransh-brand-name">Shubhransh Gupta</span>
+            <span class="shubhransh-brand-sub">Senior iOS Engineer · Coupang</span>
+          </div>
+        </a>
+
+        <!-- Controls: Audio, Live Time Clock, Menu Pill -->
+        <div class="shubhransh-nav-controls">
+          <button type="button" class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle ambient sound">
+            <div class="equalizer-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <span id="audio-toggle-label">Sound off</span>
+          </button>
+
+          <div class="live-clock-badge" title="Current Local Time in Bengaluru">
+            <span class="clock-pulse-dot" aria-hidden="true"></span>
+            <span data-live-clock>Loading India Time...</span>
+          </div>
+
+          <button type="button" class="menu-pill-btn" id="menu-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+            MENU
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Swiss Drawer Menu -->
+  <div class="shubhransh-drawer" id="shubhransh-drawer" aria-hidden="true">
+    <div class="drawer-content">
+      <ul class="drawer-links">
+        <li><a href="index.html#hero" class="drawer-link">01. Home</a></li>
+        <li><a href="index.html#projects" class="drawer-link">02. Selected Work</a></li>
+        <li><a href="index.html#experience" class="drawer-link">03. Experience</a></li>
+        <li><a href="index.html#services" class="drawer-link">04. Capabilities</a></li>
+        <li><a href="index.html#workflow" class="drawer-link">05. Process</a></li>
+        <li><a href="contributions.html" class="drawer-link">06. Open Source</a></li>
+        <li><a href="recommendations.html" class="drawer-link">07. Testimonials</a></li>
+        <li><a href="faq.html" class="drawer-link" style="color: var(--accent);">08. FAQ &amp; Search</a></li>
+        <li><a href="index.html#contact" class="drawer-link">09. Contact</a></li>
+      </ul>
+      <div class="drawer-sublinks">
+        <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="drawer-sublink" download="Shubhransh-Gupta-Resume.pdf">↓ Download Resume (PDF)</a>
+        <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="drawer-sublink">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/shubhransh-gupta/" target="_blank" rel="noopener" class="drawer-sublink">LinkedIn ↗</a>
+        <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="drawer-sublink">Medium ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- FAQ Page Hero -->
+    <section class="faq-page-hero">
+      <div class="container">
+        <div style="margin-bottom: 20px;">
+          <a href="index.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); text-decoration: none; font-weight: 600;">
+            ← Back to Portfolio Dossier
+          </a>
+        </div>
+        <p class="section-eyebrow">Search Intelligence &amp; Career FAQ</p>
+        <h1 class="section-heading" style="margin-bottom: 16px;">
+          Architectural Dossier &amp; Questions.
+        </h1>
+        <p style="font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.6; color: var(--text-body); max-width: 820px;">
+          Verified answers regarding high-scale iOS architectures, 50M+ consumer reach, Swift 6 concurrency, Big Tech toolchains (Apple &amp; Google), and production engineering standards.
+        </p>
+
+        <!-- Live Search Box -->
+        <div class="faq-search-box">
+          <span class="faq-search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Search architecture, Swift 6, Coupang, Apple OSS..." aria-label="Search FAQs">
+        </div>
+
+        <div class="faq-category-pills">
+          <button type="button" class="faq-cat-btn active" data-category="all">All Questions (10)</button>
+          <button type="button" class="faq-cat-btn" data-category="career">Career &amp; Identity</button>
+          <button type="button" class="faq-cat-btn" data-category="architecture">Architecture &amp; Scale</button>
+          <button type="button" class="faq-cat-btn" data-category="oss">Big Tech OSS</button>
+          <button type="button" class="faq-cat-btn" data-category="ai">Metal &amp; AI</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion List -->
+    <section class="shubhransh-section" style="padding-top: 48px;">
+      <div class="container">
+        <div class="faq-grid" id="faq-accordion-list">
+
+          <!-- 01 -->
+          <div class="faq-card open" data-category="career">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>01. Who is Shubhransh Gupta (Subhransh Gupta)?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Shubhransh Gupta</strong> (also written as <strong>Subhransh Gupta</strong>) is a Senior iOS Engineer based in Bengaluru, India, currently leading core consumer architecture at <strong>Coupang</strong>. With over <strong>5+ years</strong> of production mobile engineering, he has architected high-concurrency systems across <strong>Coupang</strong>, <strong>Navi</strong> (FinTech &amp; UPI), <strong>MakeMyTrip</strong> (OTA Travel Super-App), and <strong>Nuclei</strong> (Mobile Banking SDKs).
+              </p>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="faq-card" data-category="architecture">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>02. What consumer scale and performance metrics does Shubhransh architect for?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                His production mobile architectures serve over <strong>50 million daily active users</strong> with a verified <strong>99.98% crash-free session stability</strong>. Key engineering achievements include sub-100ms checkout response funnels, zero-regression UPI payment flows, and rock-solid 120Hz ProMotion UI rendering without main-thread hitches.
+              </p>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="faq-card" data-category="oss">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>03. What are Shubhransh Gupta's open-source contributions across Apple and Google?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Shubhransh is an active upstream contributor to primary developer toolchains:
+              </p>
+              <ul style="margin: 12px 0 12px 20px; line-height: 1.8;">
+                <li><strong>Apple mlx-swift:</strong> Hardened convolution layer boundary checks in Metal GPU shaders.</li>
+                <li><strong>Apple swift-argument-parser:</strong> Enhanced CLI validation and error diagnostics.</li>
+                <li><strong>Apple swift-protobuf &amp; swift-openapi-runtime:</strong> Optimized schema codegen and streaming HTTP body parsing.</li>
+                <li><strong>Google osv-scanner:</strong> Improved open-source vulnerability parsing and dependency audit speeds.</li>
+                <li><strong>Fastlane &amp; Tuist:</strong> Optimized automated deployment lanes and Xcode project generation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="faq-card" data-category="career">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>04. What is the difference between shubhransh.is-a.dev and shubhransh-gupta.is-a.dev?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>shubhransh.is-a.dev</strong> serves as Shubhransh Gupta's authoritative career dossier, production mobile engineering portfolio, verified testimonials, and professional contact gateway.<br><br>
+                In contrast, <strong>shubhransh-gupta.is-a.dev</strong> serves as his experimental systems lab dedicated to on-device machine learning, Apple Metal GPU compute kernels, and autonomous agent architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="faq-card" data-category="architecture">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>05. How does Shubhransh approach Swift 6 strict concurrency and modularization?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                He enforces Swift 6 strict concurrency across production targets: isolating mutable state into actors, enforcing <code>@Sendable</code> boundaries across concurrent tasks, eliminating data races at compile time, and decoupling large codebases into independent Swift Package Manager / Tuist micro-frameworks for fast incremental compilation.
+              </p>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="faq-card" data-category="architecture">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>06. What profiling methodologies are used to eliminate memory leaks and thermal throttling?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Using Apple Instruments (Time Profiler, Allocations, Leaks, System Trace) and Xcode memory graphs, Shubhransh rigorously identifies reference cycles, offloads heavy JSON decodes to cooperative background thread pools, and ensures UI rendering never stalls the main run loop.
+              </p>
+            </div>
+          </div>
+
+          <!-- 07 -->
+          <div class="faq-card" data-category="architecture">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>07. What is Shubhransh's experience in FinTech, UPI, and Banking Security?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                At <strong>Navi</strong> and <strong>Nuclei</strong>, Shubhransh engineered mission-critical payment SDKs and UPI fund transfer flows processing millions in daily volume with zero transactional loss. Implemented idempotent networking, certificate pinning, biometric authentication (FaceID/TouchID), and strict PCI-DSS compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- 08 -->
+          <div class="faq-card" data-category="ai">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>08. What is Shubhransh's background in on-device AI and Metal GPU computing?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Shubhransh investigates on-device AI efficiency using Apple Metal Shading Language (MSL), CoreML quantization (4-bit/8-bit weights), and Apple's MLX Swift framework, enabling privacy-first local embedding generation and low-latency inference on Apple Silicon hardware.
+              </p>
+            </div>
+          </div>
+
+          <!-- 09 -->
+          <div class="faq-card" data-category="career">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>09. Where is Shubhransh located, and what is his availability?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Shubhransh is based in <strong>Bengaluru, Karnataka, India</strong>. He operates across global technical timezones (APAC, EMEA, Americas) and welcomes conversations regarding high-scale engineering challenges, architecture advisory, and technical leadership.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="faq-card" data-category="career">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>10. How can recruiters, engineering managers, or collaborators reach out?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Direct communication can be initiated via email at <a href="mailto:gupta.subhransh@gmail.com" style="color: var(--accent); font-weight: 600;">gupta.subhransh@gmail.com</a>, via LinkedIn at <a href="https://www.linkedin.com/in/shubhransh-gupta/" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 600;">linkedin.com/in/shubhransh-gupta/</a>, or by inspecting his public repositories on <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 600;">github.com/shubhransh-gupta</a>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Obsidian Black Swiss Footer -->
+  <footer class="shubhransh-footer" id="contact">
+    <div class="footer-watermark" aria-hidden="true">HELLO</div>
+
+    <div class="container footer-content-wrap">
+      <p class="footer-kicker">Still scrolling? Good sign.</p>
+      <h2 class="footer-headline">Got a role or project<br>in mind?</h2>
+
+      <div class="footer-email-box">
+        <a href="mailto:gupta.subhransh@gmail.com" class="footer-email-link">gupta.subhransh@gmail.com ↗</a>
+        <p class="footer-email-note">I usually reply within 24 hours.</p>
+      </div>
+
+      <div class="footer-status-strip">
+        <div class="footer-status-pill">
+          <span class="footer-status-dot" aria-hidden="true"></span>
+          <span>Open for Senior iOS Roles &amp; High-Impact Architecture</span>
+        </div>
+
+        <nav class="footer-directory" aria-label="Footer Directory">
+          <a href="index.html#hero" class="footer-dir-link">Home</a>
+          <a href="index.html#journey" class="footer-dir-link">Career Journey</a>
+          <a href="index.html#projects" class="footer-dir-link">Work</a>
+          <a href="contributions.html" class="footer-dir-link">Open Source</a>
+          <a href="recommendations.html" class="footer-dir-link">Testimonials</a>
+          <a href="faq.html" class="footer-dir-link" style="color: var(--accent);">FAQ</a>
+          <a href="assets/resume/Shubhransh-Gupta-Resume.pdf" class="footer-dir-link" download="Shubhransh-Gupta-Resume.pdf">↓ Resume</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          <span data-live-clock>Loading India Time...</span>
+        </div>
+
+        <div class="footer-created-by">
+          Created with ❤️ by Shubhransh Gupta
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <a href="https://github.com/shubhransh-gupta" target="_blank" rel="noopener" class="footer-dir-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/shubhransh-gupta/" target="_blank" rel="noopener" class="footer-dir-link">LinkedIn ↗</a>
+          <a href="https://medium.com/@Shubhransh-Gupta" target="_blank" rel="noopener" class="footer-dir-link">Medium ↗</a>
+          <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/shubhransh-engine.js?v=9.5"></script>
+  <script>
+    // Live Search Filter for FAQs
+    (function() {
+      const searchInput = document.getElementById('faq-search-input');
+      const cards = document.querySelectorAll('.faq-card');
+      const catBtns = document.querySelectorAll('.faq-cat-btn');
+
+      let currentCategory = 'all';
+
+      function filterFaqs() {
+        const query = (searchInput.value || '').toLowerCase().trim();
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          const text = card.textContent.toLowerCase();
+          const matchesQuery = !query || text.includes(query);
+          const matchesCat = currentCategory === 'all' || cat === currentCategory;
+
+          if (matchesQuery && matchesCat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterFaqs);
+      }
+
+      catBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+          filterFaqs();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
