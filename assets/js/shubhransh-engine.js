@@ -1,5 +1,5 @@
 /**
- * Sagar-Inspired High Performance Portfolio Engine
+ * Shubhransh High Performance Portfolio Engine
  * Zero external dependencies | 60 FPS Locked on Budget Devices
  */
 
